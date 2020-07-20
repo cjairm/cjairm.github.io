@@ -112,13 +112,13 @@ const Home: React.FC = () => {
             <div className={classes.overlayImg}>
                 <div className={classes.textContainer}>
                     <Typography variant="h1" className={classes.nameText}>
-                        I'm Carlos Méndez
+                        I am Carlos Méndez
                     </Typography>
                     <Typography variant="h3" className={classes.aboutText}>
-                        I want to be a person that inspire others, I want to be
-                        a role model for those who think that it is imposible,
-                        and I want to be an important person that always follows
-                        values of respect, justice, and truth.
+                        I want to be a person that inspires others, I want to be
+                        a role model for those who think that anything is
+                        impossible, and I want to be an important person that is
+                        respectful, fair, and truthful.
                     </Typography>
                     <ul className={classes.socialUl}>
                         <li>

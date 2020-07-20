@@ -2,9 +2,9 @@ export const Experience = [
     {
         src: "./images/startup.gif",
         alt: "startup Experience",
-        head: ["Startup​, San Francisco​", "Cofounder", "Testing"],
+        head: ["Startup​, San Francisco​", "Co-Founder", "Testing"],
         content: [
-            "Developed mobile app with ​ React Native​ (and ​ Redux) and ​ Expo​.",
+            "Developed mobile app with React Native​ (and Redux) and Expo​.",
             "API developed with ​ Laravel​.",
             "https://bit.ly/cjairm-startup-2019",
         ],
@@ -18,7 +18,7 @@ export const Experience = [
             "April 2019 - June 2020",
         ],
         content: [
-            "I led the team to create a new web app using the same architecture, frameworks and languages used at BeMusical.",
+            "I led the software development team to create a new web app using the same architecture, frameworks and languages used at BeMusical.",
         ],
         onClick: () => {
             window.location.href = "https://revsteer.com/";
@@ -34,7 +34,7 @@ export const Experience = [
             "August 2017 - June 2020",
         ],
         content: [
-            "Developed backend with current traffic of 1,600 users/month, ​ PHP (Laravel), Redis​.",
+            "Developed backend with current traffic of 1,600 users/month, PHP (Laravel), Redis​.",
             "Developed frontend with ​ Adobe XD, JS (React, Redux), CSS (Bootstrap / Material UI)​.",
             "Git​ manager working collaboratively with 10 team members.",
             "Designed and builded automated systems to manage our scalable infrastructure on AWS​, Digital Ocean​, MySQL​.",
@@ -70,13 +70,13 @@ export const Experience = [
         alt: "HadaElectronics Experience",
         head: [
             "HadaElectronics.com",
-            "Hardware Designer(Cofounder)",
+            "Hardware Designer(Co-Founder)",
             "January 2016 - December 2019",
         ],
         content: [
             "Developed firmware for over 10 projects in automation Arduino​, PIC​.",
             "Created a website that is currently under maintenance (​Laravel and React TS​).",
-            "We read 50+ engineering books to create 12 online videos didactic content for over 30k views, including topics: Basics electronics components, Digital electronics and logic design, VHDL​ IDE installation in Linux",
+            "We read 50+ engineering books to create 12 didactic videos for over 30k views, including topics: Basics electronics components, Digital electronics and logic design, VHDL​ IDE installation in Linux",
         ],
         onClick: () => {
             window.location.href = "https://hadaelectronics.com/";
@@ -176,6 +176,17 @@ export const Projects = [
         },
         btnText: "Source Code",
     },
+    {
+        src: "./images/continentalProject.jpeg",
+        alt: "Continental Hackathon",
+        title: "Continental Hackathon",
+        content: "I participated and won the first place in an IoT Hackathon.",
+        onClick: () => {
+            window.location.href =
+                "https://github.com/cjairm/javascript/tree/master/Projects/react-app-flickr";
+        },
+        btnText: "Source Code",
+    },
 ];
 
 export const Education = [
@@ -190,7 +201,7 @@ export const Education = [
         content: [
             "Guadalajara, Jalisco, Mex.",
             "January 2018 - 2019.",
-            "Information Technology and Communications Engineering. Specialty in Big Data. ​ GPA (3.8 / 4.0)",
+            "Information Technology and Communications Engineering. Specialty in Big Data. GPA (3.8 / 4.0)",
         ],
         onClick: () => {
             window.location.href = "http://www.uag.mx/";
@@ -208,7 +219,7 @@ export const Education = [
         content: [
             "Atlixco, Puebla, Mex.",
             "August 2009 - August 2014.",
-            "Mechatronics Engineer . Specialty in Control. ​ GPA (3.4 / 4.0)",
+            "Mechatronics Engineer. Specialty in Control. GPA (3.4 / 4.0)",
         ],
         onClick: () => {
             window.location.href = "https://www.itsatlixco.edu.mx/";

@@ -70,25 +70,24 @@ const About: React.FC = () => {
                         <div className={classes.textContainer}>
                             <Typography variant="h2">About Me</Typography>
                             <Typography>
-                                I'm a person with a lot of dreams, I learn by
-                                myself, I love to learn new things, and I always
-                                keep updated on my work field. I'm an
-                                entreprenour, and I've created two companies
-                                which I have tried to help other people, such
-                                as, the more voulnerable group of people in
-                                Mexico.
+                                I am a person with a lot of dreams. I learn on
+                                my own. I love to learn new things, and I am
+                                always updated on my work field. I am an
+                                entrepreneur, and I've created two companies
+                                where I am helping other people, such as,
+                                developers and mexican women by giving them a
+                                platform where they can sell products.
                                 <br />
                                 <br />
-                                I'm Mexican, and I speak two languages. I love
+                                I am Mexican, and I speak two languages. I love
                                 traveling. I love to eat every single regional
-                                food everywhere I go. I enjoy life. I give a
-                                smile to everyone.
+                                food everywhere I go. I always happy, and I give
+                                a smile to everyone.
                                 <br />
-                                <br />
-                                I’m passionate about building great products
-                                that make people’s lives easier. I have been
-                                using JavaScript for 5 years, 2 years using
-                                React and Redux. My expertise comes from
+                                <br />I am passionate about building great
+                                products that make people’s lives easier. I have
+                                been using JavaScript for 5 years, React and
+                                Redux for 2 years. My expertise comes from
                                 startups where I developed a lot of different
                                 programs.
                             </Typography>
