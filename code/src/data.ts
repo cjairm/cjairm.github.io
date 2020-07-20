@@ -5,7 +5,7 @@ export const Experience = [
         head: ["Startup​, San Francisco​", "Co-Founder", "Testing"],
         content: [
             "Developed mobile app with React Native​ (and Redux) and Expo​.",
-            "API developed with ​ Laravel​.",
+            "API developed with Laravel​.",
             "https://bit.ly/cjairm-startup-2019",
         ],
     },
@@ -35,7 +35,7 @@ export const Experience = [
         ],
         content: [
             "Developed backend with current traffic of 1,600 users/month, PHP (Laravel), Redis​.",
-            "Developed frontend with ​ Adobe XD, JS (React, Redux), CSS (Bootstrap / Material UI)​.",
+            "Developed frontend with Adobe XD, JS (React, Redux), CSS (Bootstrap / Material UI)​.",
             "Git​ manager working collaboratively with 10 team members.",
             "Designed and builded automated systems to manage our scalable infrastructure on AWS​, Digital Ocean​, MySQL​.",
             "Developed the payments platform integrating Stripe​ API.",
@@ -58,7 +58,7 @@ export const Experience = [
             "I set up and updated a testing server (​AWS, Digital Ocean, MariaDB​).",
             "I configured git in order to have repos and work collaboratively.",
             "Deploy the latest software development tools to aid development within the rest of the organization",
-            "We provided maintenance to around 15 websites using ​ Laravel, Bootstrap, JQuery​, with over 10,000 users/month.",
+            "We provided maintenance to around 15 websites using Laravel, Bootstrap, JQuery​, with over 10,000 users/month.",
         ],
         onClick: () => {
             window.location.href = "http://domovolcanico.com/";
