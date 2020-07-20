@@ -181,11 +181,6 @@ export const Projects = [
         alt: "Continental Hackathon",
         title: "Continental Hackathon",
         content: "I participated and won the first place in an IoT Hackathon.",
-        onClick: () => {
-            window.location.href =
-                "https://github.com/cjairm/javascript/tree/master/Projects/react-app-flickr";
-        },
-        btnText: "Source Code",
     },
 ];
 
