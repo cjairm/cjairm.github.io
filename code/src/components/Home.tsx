@@ -1,98 +1,18 @@
 import React from "react";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+
 import { Grid, Fab, Fade, useMediaQuery, Typography } from "@material-ui/core";
 import {
     LinkedIn as LinkedInIcon,
     GitHub as GitHubIcon,
     KeyboardArrowDown as KeyboardArrowDownIcon,
 } from "@material-ui/icons";
+import { useTranslation } from "react-i18next";
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            height: "calc(100vh - 64px)",
-            minHeight: 550,
-            [theme.breakpoints.down(600)]: {
-                minHeight: 400,
-                height: "calc(100vh - 56px)",
-            },
-            border: 5,
-            display: "block",
-            position: "relative",
-        },
-        backgroundImg: {
-            backgroundImage: 'url("./images/homeBackground.jpg")',
-            width: "100%",
-            height: "100%",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-        },
-        overlayImg: {
-            position: "absolute",
-            top: 0,
-            left: 0,
-            transition: "0.5s ease",
-            backgroundColor: "rgba(34, 116, 165, 0.25)",
-            height: "100%",
-            width: "100%",
-        },
-        textContainer: {
-            display: "flex",
-            position: "relative",
-            flexGrow: 1,
-            height: "100%",
-            width: "100%",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-        },
-        nameText: {
-            fontSize: 90,
-            [theme.breakpoints.down(600)]: {
-                fontSize: 70,
-            },
-            color: "#fff",
-            letterSpacing: "-2px",
-            margin: "0 auto 18px auto",
-            textShadow: "0px 1px 3px rgba(0, 0, 0, .8)",
-            textAlign: "center",
-        },
-        aboutText: {
-            width: "70%",
-            fontSize: 20,
-            color: "#A8A8A8",
-            margin: "0 auto",
-            textShadow: "0px 1px 2px rgba(0, 0, 0, .5)",
-            textAlign: "center",
-        },
-        socialUl: {
-            margin: "24px 0",
-            padding: 0,
-            fontSize: 30,
-            textShadow: "0px 1px 2px rgba(0, 0, 0, .8)",
-            "& li": {
-                display: "inline-block",
-                margin: "0 15px",
-                padding: 0,
-                "& a": {
-                    textDecoration: "none",
-                    outline: 0,
-                },
-            },
-        },
-        socialIcon: {
-            color: "#fff",
-        },
-        arrowPosition: {
-            position: "absolute",
-            bottom: 30,
-        },
-    })
-);
+import useStyles from "../styles/home";
 
 const Home: React.FC = () => {
     const classes = useStyles();
+    const { t } = useTranslation();
 
     const onSelectSectionHandler = (
         event: React.MouseEvent<HTMLButtonElement>
@@ -112,13 +32,10 @@ const Home: React.FC = () => {
             <div className={classes.overlayImg}>
                 <div className={classes.textContainer}>
                     <Typography variant="h1" className={classes.nameText}>
-                        I am Carlos Méndez
+                        {t("home.name")}
                     </Typography>
                     <Typography variant="h3" className={classes.aboutText}>
-                        I want to be a person that inspires others, I want to be
-                        a role model for those who think that anything is
-                        impossible, and I want to be an important person that is
-                        respectful, fair, and truthful.
+                        {t("home.text")}
                     </Typography>
                     <ul className={classes.socialUl}>
                         <li>

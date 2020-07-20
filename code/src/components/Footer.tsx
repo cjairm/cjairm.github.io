@@ -1,6 +1,7 @@
 import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -23,10 +24,12 @@ const useStyles = makeStyles((theme: Theme) =>
 const Footer: React.FC = () => {
     const classes = useStyles();
 
+    const { t } = useTranslation();
+
     return (
         <Grid container className={classes.root}>
             <Grid item xs={12} className={classes.textContainer}>
-                <Typography>Theme created by Carlos Méndez.</Typography>
+                <Typography>{t("footer.text")}</Typography>
             </Grid>
         </Grid>
     );

@@ -5,6 +5,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import App from "./App";
 import theme from "./styles/main";
 import "./styles/main.css";
+import "./i18n";
 
 const app = (
     <ThemeProvider theme={theme}>

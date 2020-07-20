@@ -1,31 +1,13 @@
 import React from "react";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, Container, Typography } from "@material-ui/core";
+import { useTranslation } from "react-i18next";
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            position: "relative",
-            backgroundColor: "#fff",
-            margin: `${theme.spacing(5)}px auto`,
-        },
-        container: {
-            width: "100%",
-            height: "100%",
-        },
-        text: {
-            textAlign: "center",
-            whiteSpace: "pre-wrap",
-            margin: "auto",
-            [theme.breakpoints.down(600)]: {
-                padding: `${theme.spacing(2)}px 0`,
-            },
-        },
-    })
-);
+import useStyles from "../styles/quotes";
 
 const Quotes: React.FC = () => {
     const classes = useStyles();
+
+    const { t } = useTranslation();
 
     return (
         <Grid container className={classes.root}>
@@ -34,13 +16,13 @@ const Quotes: React.FC = () => {
                     <Grid item xs={12} sm={6} className={classes.text}>
                         <Typography variant="h4">
                             <em>
-                                Research your own experience.
+                                {t("quotes.bruceone")}
                                 <br />
-                                Absorb what is useful.
+                                {t("quotes.brucetwo")}
                                 <br />
-                                Reject what is useless.
+                                {t("quotes.brucethree")}
                                 <br />
-                                Add what is essentially your own.
+                                {t("quotes.brucefour")}
                             </em>
                         </Typography>
                         <Typography>— Bruce Lee</Typography>
@@ -48,9 +30,9 @@ const Quotes: React.FC = () => {
                     <Grid item xs={12} sm={6} className={classes.text}>
                         <Typography variant="h4">
                             <em>
-                                There is no victory
+                                {t("quotes.unknownone")}
                                 <br />
-                                without sacrifice.
+                                {t("quotes.unknowntwo")}
                             </em>
                         </Typography>
                         <Typography>— Unknown</Typography>

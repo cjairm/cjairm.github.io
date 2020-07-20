@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, Backdrop, CircularProgress } from "@material-ui/core";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -10,6 +10,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Education from "./components/Education";
+import ButtonLang from "./components/ButtonLang";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -30,16 +31,25 @@ const App: React.FC = () => {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.root}>
-            <Header />
-            <Home />
-            <About />
-            <Quotes />
-            <Experience />
-            <Projects />
-            <Education />
-            <Footer />
-        </Grid>
+        <Suspense
+            fallback={
+                <Backdrop open={true}>
+                    <CircularProgress color="inherit" />
+                </Backdrop>
+            }
+        >
+            <Grid container className={classes.root}>
+                <Header />
+                <Home />
+                <About />
+                <Quotes />
+                <Experience />
+                <Projects />
+                <Education />
+                <Footer />
+                <ButtonLang />
+            </Grid>
+        </Suspense>
     );
 };
 

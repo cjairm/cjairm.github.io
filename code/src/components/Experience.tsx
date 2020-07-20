@@ -8,8 +8,6 @@ import { Experience as ExperienceData } from "../data";
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            // maxWidth: "100%",
-            // position: "relative",
             backgroundColor: "#363633",
         },
     })
