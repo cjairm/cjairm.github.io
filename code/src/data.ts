@@ -87,6 +87,29 @@ export const Experience = [
 
 export const Projects = [
     {
+        src: "./images/petLoversProject.png",
+        alt: "Pet Lovers Site",
+        title: "Pet Lovers Site",
+        content:
+            "Project developed with React JS, Laravel, Docker, SCSS and Bootstrap.",
+        onClick: () => {
+            window.location.href =
+                "https://github.com/cjairm/Laravel/tree/main/Projects/pet-lovers";
+        },
+        btnText: "Source Code",
+    },
+    {
+        src: "./images/plantsProject.png",
+        alt: "Plant control Site",
+        title: "Plant control Site",
+        content: "Project developed with React TS, SCSS and Bootstrap.",
+        onClick: () => {
+            window.location.href =
+                "https://github.com/cjairm/typescript/tree/master/Projects/PlantsProject";
+        },
+        btnText: "Source Code",
+    },
+    {
         src: "./images/portfolio.png",
         alt: "Portfolio Project",
         title: "Personal Portfolio​",
