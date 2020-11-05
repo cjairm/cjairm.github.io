@@ -87,6 +87,18 @@ export const Experience = [
 
 export const Projects = [
     {
+        src: "./images/PokemonProject.png",
+        alt: "Pokemon app",
+        title: "Pokemon app",
+        content:
+            "Project developed with React Native (styled_components), Laravel.",
+        onClick: () => {
+            window.location.href =
+                "https://github.com/cjairm/Pokedex-ReactNative";
+        },
+        btnText: "Source Code",
+    },
+    {
         src: "./images/petLoversProject.png",
         alt: "Pet Lovers Site",
         title: "Pet Lovers Site",
