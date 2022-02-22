@@ -1,6 +1,6 @@
 {
-  "short_name": "Carlos Mendez",
-  "name": "This is a portfolio where you can find information about me.",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

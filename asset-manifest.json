@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.170138d6.chunk.css",
-    "main.js": "/static/js/main.7cf3c7b6.chunk.js",
-    "main.js.map": "/static/js/main.7cf3c7b6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a048f94b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a048f94b.js.map",
-    "static/js/2.f8243b0b.chunk.js": "/static/js/2.f8243b0b.chunk.js",
-    "static/js/2.f8243b0b.chunk.js.map": "/static/js/2.f8243b0b.chunk.js.map",
+    "main.css": "/static/css/main.6920f501.css",
+    "main.js": "/static/js/main.7b5538ec.js",
+    "static/media/hero-bg.jpg": "/static/media/hero-bg.56a8c50aebde6806b43c.jpg",
+    "static/media/petLoversProject.png": "/static/media/petLoversProject.cfe13ddb446b98334c65.png",
+    "static/media/plane-bg.png": "/static/media/plane-bg.e9e8c5b6b80d8817fd5a.png",
+    "static/media/fpgaProject.png": "/static/media/fpgaProject.7f46b86410791b48f404.png",
+    "static/media/iotProject.png": "/static/media/iotProject.8f58702e794aa538c5c2.png",
+    "static/media/PokemonProject.png": "/static/media/PokemonProject.50877b6a5b3d4bf61646.png",
+    "static/media/aboutme.jpg": "/static/media/aboutme.7c19a9ea4773324b1136.jpg",
+    "static/media/plantsProject.png": "/static/media/plantsProject.a2fe0e285e51df02a97f.png",
+    "static/media/flickrMaterialProject.png": "/static/media/flickrMaterialProject.10f94432c4650d0c9ea9.png",
+    "static/media/golangAlgoritms.png": "/static/media/golangAlgoritms.7cd42acc4d87ebb1dc8b.png",
+    "static/media/flickrBootstrapProject.png": "/static/media/flickrBootstrapProject.de3a5ed686ade3ee0f5f.png",
+    "static/media/clockProject.png": "/static/media/clockProject.8036bf440cf80485a099.png",
+    "static/media/robotProject.png": "/static/media/robotProject.2f7982bd2bdf16d46452.png",
     "index.html": "/index.html",
-    "precache-manifest.19b2f4652bdc66a5ade540916f9a2dac.js": "/precache-manifest.19b2f4652bdc66a5ade540916f9a2dac.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.170138d6.chunk.css.map": "/static/css/main.170138d6.chunk.css.map",
-    "static/js/2.f8243b0b.chunk.js.LICENSE.txt": "/static/js/2.f8243b0b.chunk.js.LICENSE.txt"
+    "main.6920f501.css.map": "/static/css/main.6920f501.css.map",
+    "main.7b5538ec.js.map": "/static/js/main.7b5538ec.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.a048f94b.js",
-    "static/js/2.f8243b0b.chunk.js",
-    "static/css/main.170138d6.chunk.css",
-    "static/js/main.7cf3c7b6.chunk.js"
+    "static/css/main.6920f501.css",
+    "static/js/main.7b5538ec.js"
   ]
 }
