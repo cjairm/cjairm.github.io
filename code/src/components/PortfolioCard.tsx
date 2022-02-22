@@ -28,7 +28,7 @@ const PortfolioCard: FC<PortfolioCardComponentProps> = (props) => {
           <div className="">
             <p className="is-size-5">{props.title}</p>
             {props.hashtags.map((hashtag: string, index: number) => (
-              <a href="/" key={index}>
+              <a href="/#" key={index}>
                 {hashtag}{" "}
               </a>
             ))}
