@@ -1,13 +1,14 @@
-import React, { FC } from "react";
+import React from "react";
+import ViewIndex from "./views/Index";
 
-import HomeIndex from "./views/home/Index";
-import Layout from "./layouts/Layout";
+// CSS compiled
+import "./css/main.css";
 
-const App: FC = () => {
+const App: React.FunctionComponent = (): React.ReactElement => {
   return (
-    <Layout>
-      <HomeIndex />
-    </Layout>
+    <>
+      <ViewIndex />
+    </>
   );
 };
 
