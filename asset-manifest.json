@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.793d2c84.css",
+    "main.css": "/static/css/main.0c574013.css",
     "main.js": "/static/js/main.e0d76acf.js",
     "static/media/main-background.jpg": "/static/media/main-background.56a8c50aebde6806b43c.jpg",
     "static/media/pet-lovers-project.png": "/static/media/pet-lovers-project.cfe13ddb446b98334c65.png",
@@ -20,11 +20,11 @@
     "static/media/clock-project.png": "/static/media/clock-project.8036bf440cf80485a099.png",
     "static/media/robot-project.png": "/static/media/robot-project.2f7982bd2bdf16d46452.png",
     "index.html": "/index.html",
-    "main.793d2c84.css.map": "/static/css/main.793d2c84.css.map",
+    "main.0c574013.css.map": "/static/css/main.0c574013.css.map",
     "main.e0d76acf.js.map": "/static/js/main.e0d76acf.js.map"
   },
   "entrypoints": [
-    "static/css/main.793d2c84.css",
+    "static/css/main.0c574013.css",
     "static/js/main.e0d76acf.js"
   ]
 }

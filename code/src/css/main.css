@@ -13162,10 +13162,11 @@ readers do not read off random characters that represent icons */
 
 .header-background, .quote-background {
   background-image: url("../assets/main-background.jpg");
-  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; }
+  height: 100%; }
 
 .header-overlay, .quote-overlay {
   background-color: rgba(0, 0, 0, 0.6);
