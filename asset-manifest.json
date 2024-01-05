@@ -1,30 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c574013.css",
-    "main.js": "/static/js/main.e0d76acf.js",
-    "static/media/main-background.jpg": "/static/media/main-background.56a8c50aebde6806b43c.jpg",
-    "static/media/pet-lovers-project.png": "/static/media/pet-lovers-project.cfe13ddb446b98334c65.png",
-    "static/media/plane-background.png": "/static/media/plane-background.e9e8c5b6b80d8817fd5a.png",
+    "main.css": "/static/css/main.664ea589.css",
+    "main.js": "/static/js/main.8fcafaa8.js",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.2877d54f94f30c5d563c.ttf",
-    "static/media/fpga-thesis.png": "/static/media/fpga-thesis.7f46b86410791b48f404.png",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.13e40630e5866f777de8.ttf",
-    "static/media/iot-project.png": "/static/media/iot-project.8f58702e794aa538c5c2.png",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.bdb9e23299f9d1320a8b.woff2",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.7be2266f1be21c44ecd4.woff2",
-    "static/media/pokemon-project.png": "/static/media/pokemon-project.50877b6a5b3d4bf61646.png",
-    "static/media/about-me.jpg": "/static/media/about-me.7c19a9ea4773324b1136.jpg",
-    "static/media/plants-project.png": "/static/media/plants-project.a2fe0e285e51df02a97f.png",
-    "static/media/flickr-materia-project.png": "/static/media/flickr-materia-project.10f94432c4650d0c9ea9.png",
-    "static/media/golang-algoritms.png": "/static/media/golang-algoritms.7cd42acc4d87ebb1dc8b.png",
-    "static/media/flickr-bootstrap-project.png": "/static/media/flickr-bootstrap-project.de3a5ed686ade3ee0f5f.png",
-    "static/media/clock-project.png": "/static/media/clock-project.8036bf440cf80485a099.png",
-    "static/media/robot-project.png": "/static/media/robot-project.2f7982bd2bdf16d46452.png",
+    "static/media/about-me.jpg": "/static/media/about-me.7966619c4c24108baa7c.jpg",
     "index.html": "/index.html",
-    "main.0c574013.css.map": "/static/css/main.0c574013.css.map",
-    "main.e0d76acf.js.map": "/static/js/main.e0d76acf.js.map"
+    "main.664ea589.css.map": "/static/css/main.664ea589.css.map",
+    "main.8fcafaa8.js.map": "/static/js/main.8fcafaa8.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c574013.css",
-    "static/js/main.e0d76acf.js"
+    "static/css/main.664ea589.css",
+    "static/js/main.8fcafaa8.js"
   ]
 }
