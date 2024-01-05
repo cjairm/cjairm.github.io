@@ -1,19 +1,10 @@
-import portfolioGolangAlgoritms from "./assets/portfolio/golang-algoritms.png";
-import portfolioPokemonProject from "./assets/portfolio/pokemon-project.png";
-import portfolioPetLoversProject from "./assets/portfolio/pet-lovers-project.png";
-import portfolioPlantsProject from "./assets/portfolio/plants-project.png";
-import portfolioIotProject from "./assets/portfolio/iot-project.png";
-import portfolioClockProject from "./assets/portfolio/clock-project.png";
-import portfolioRobotProject from "./assets/portfolio/robot-project.png";
-import portfolioFlickrBootstrapProject from "./assets/portfolio/flickr-bootstrap-project.png";
-import portfolioFlickrMaterialProject from "./assets/portfolio/flickr-materia-project.png";
-import portfolioFpgaProject from "./assets/portfolio/fpga-thesis.png";
-
 const FIRST_NAME = "Carlos";
 const MIDDLE_NAME = "Jair";
 const LAST_NAME = "Méndez";
 const USING_JS_SINCE = 2014;
 const USING_REDUX_SINCE = 2019;
+const USING_GOLANG_SINCE = 2020;
+const USING_UBUNTU_SINCE = 2014;
 const WORK_EMAIL = "jair.mendez@lever.co";
 const MAIN_EMAIL = "carlos@hadaelectronics.com";
 const SECONDARY_EMAIL = "carlos@hadamenu.com";
@@ -24,56 +15,48 @@ const personal = {
   lastName: LAST_NAME,
   fullName: `${FIRST_NAME} ${LAST_NAME}`,
   currentLocation: "Chicago, IL",
-  background: "Mechatronics Engineering",
+  bachelors: "Mechatronics Engineering",
+  masters: "Information and Communications Technology Engineering",
   emails: [MAIN_EMAIL, SECONDARY_EMAIL, WORK_EMAIL],
   phone: "+1 (224) XXX-XX66",
+  background: {
+    fullstack: [
+      "An aspiring software engineer with knowledge in software engineering practices such as designing, coding, testing, maintaining, code reviews, code comments, etc. Strong ability to communicate with clients / partners and ability to express ideas clearly and concisely.",
+      `I'm passionate about building great products that make people’s lives easier. I have been using <b>JavaScript</b> for ${new Date().getFullYear() - USING_JS_SINCE
+      } years, <b>React</b> and <b>Redux</b> for ${new Date().getFullYear() - USING_REDUX_SINCE
+      } years. My expertise comes from startups where I developed a lot of different programs.`,
+      "I have the ability to learn quickly and adapt — I'm a person that only by watching the environment around me, I'm able to learn about it. For example, I learned to code new languages by myself by reading official documentation and watching videos.",
+    ],
+    backend: [
+      `A ~${new Date().getFullYear() - USING_UBUNTU_SINCE
+      } years <b>Linux</b> user with knowledge in <b>Ubuntu</b> and software engineering practices such as designing, coding, testing, maintaining, code reviews, code comments, etc. Strong ability to communicate with clients / partners and ability to express ideas clearly and concisely.`,
+      `I'm passionate about building great products that make people’s lives easier. I have been using <b>Golang</b> for ${new Date().getFullYear() - USING_GOLANG_SINCE
+      } years. My expertise comes from startups where I developed a lot of different programs for different purposes.`,
+      "I have the ability to learn quickly and adapt — I'm a person that only by watching the environment around me, I'm able to learn about it. For example, I learned to code new languages by myself by reading official documentation and watching videos.",
+    ],
+  } as Record<string, string[]>,
   aboutMe: [
     "I'm a person with a lot of dreams. I learn on my own. I love to learn new things, and I'm always updated on my work field. I'm an entrepreneur, and I've created two companies where I'm helping other people, such as, developers and mexican women by giving them a platform where they can sell products.",
     "I speak two languages (English and Spanish). I'd love to learn more languages. I enjoy traveling. I love to eat every single regional food everywhere I go, and I smile to everyone.",
     "To those that told me because I'm Mexican I cannot shine, that the success was not available in my region (they may be partially right), well... I had the opportunity to be born in a land full of potholes, challenges and reasons to give up. A country that every day teaches us how to handle disappointment and frustration. A country that makes us live in a constant necessity to reinvent ourselves (not for pleasure but for survival).",
-    "We don't need contacts, or money. WE DON'T NEED THE EASY WAY. It's true that we don't have trustworthy institutions or accessible eduation, not even tranquility in the streets (in Mexico). But what I DO have balls, and desire, and ambition, and creativity, and pride, and an enviable resilience to defeat any challenges in my way.",
-    "Now, you need a meteorite to stop me. I'm hoping to do the things right to become an inspiration for the 120 million (population in Mexico) of folks that still don't believe that it can be done. I want to became another reason to never give up, another role model that inspires everyone to continue bringing down walls.",
-    "Let's make it happen!",
+    "I'm eager to learn new things and do my best every day.",
   ],
-  quotes: {
-    "Bruce Lee":
-      "Research your own experience. Absorb what is useful. Reject what is useless. Add what is essentially your own",
-    Unknown: "There is no victory without sacrifice",
-    "Walt Disney": "The way to get started is to quit talking and begin doing",
-  } as Record<string, string>,
   links: {
     linkedin: "https://www.linkedin.com/in/cjairm/",
     github: "https://github.com/cjairm",
   },
 };
 
-const header = {
-  greeting: `Hey there &#128075; I'm ${FIRST_NAME} ${MIDDLE_NAME}`,
-  quotes: [
-    "I want to be a person that <i>inspires</i> others",
-    "I want to be a <i>role model</i> for those who think that anything is impossible",
-    "I want to be an important person that is <i>respectful</i>, <i>fair</i>, and <i>truthful</i>",
-  ],
-};
-
 const experience = {
   currentPosition: "Software Engineer",
-  introduction: [
-    `I'm passionate about building great products that make people’s lives easier. I have been using JavaScript for ${
-      new Date().getFullYear() - USING_JS_SINCE
-    } years, React and Redux for ${
-      new Date().getFullYear() - USING_REDUX_SINCE
-    } years. My expertise comes from startups where I developed a lot of different programs.`,
-    "I have the ability to learn quickly and adapt — I'm a person that only by watching the environment around me, I'm able to learn about it. For example, I learned to code new languages by myself by reading official documentation and watching videos.",
-  ],
+  introduction: [],
   current: {
     company: {
-      name: "Lever",
+      name: "Employ (Lever)",
       address: "1125 Mission st, San Francisco, CA 94103",
-      additionalInfo: "Now part of Employ Inc",
     },
     position: {
-      name: "Software engineer L3",
+      name: "Software engineer",
       startedAt: 2021,
       endedAt: "Present",
     },
@@ -83,19 +66,19 @@ const experience = {
     },
     workEmail: WORK_EMAIL,
     description: [
-      "Spec writer and project lead of Remote Work project",
-      "I implemented a lot of optimizations in the server response for the one page, reducing the size of the response by over 75%, as well as reducing the response time by over 70%. These optimizations included removing duplicated information, and moving some data to be loaded only when necessary. By reducing the size of the response, our servers should be able to construct the response faster, and users should be able to render the page faster.",
-      "Participate in Lever's product development process and ship features to customers using DerbyJS and ShareDB.",
-      "Participate in on-call rotation in Support Engineering to help diagnose and resolve production problems and customer issues.",
-      "Assist other developers in best practices for Lever product development.",
-      "Participate in interviewing and hiring, as a way to influence team growth and how our values inform our culture.",
-      "Write internal documentation for features and systems so other engineers and stakeholders are brought along with decisions.",
+      "Wrote and configured integration tests of the “Bulk Imports” project that increased the confidence of developers while improving / maintaining the feature since it will catch bugs if they are introduced.",
+      "Spec writer, project lead of 5 people, and individual contributor of “Remote work”, where conversations with Indeed and LinkedIn to make sure the new feature worked according to the documentation provided. Work very closely with the API team and PM because the new feature was exposed to paid and public APIs; and the XML feed, as well. Also, post-release meetings with LinkedIn happened. <b>Impacted ~250k daily applicants</b>",
+      "Optimizations in the server response for the “jobs” internal page, reducing the size of the response by over 75% in huge accounts. This included removing duplicate information that the server was emitting and reconstructing references on the client (worked with framework team), loading the users asynchronously,  and only loading active postings on page load, instead of all postings. <b>Impacted +27k users</b>",
+      "Spec writer, project lead managing a team of 4, and individual contributor of “Referrals”. The project impacted paid features only. Delivered on time. It handles automated actions over referred candidates and their profiles. Also, a lot of UI/UX improvements. <b>Impacted ~1.5M users</b>",
+      "Upgraded Elasticsearch cluster 6.8. Investigations led to a move to OpenSearch 2.11. Recommend the new size of the cluster based on annual growth and current size/fatigue/usage. Monitors were configured to analyze the health of the new cluster. Led the reindex process and the release was done in batches. Restructured the entire (internal) repo where some deprecations and fully removed unused functions were accomplished. Conversions from callbacks to async patterns increased readability in the repo. On top of that, some integration tests were enabled for the service. To conclude those structure changes allow to upgrade versions much easier. <b>Impacted ~1.5M users, and cutting 35% of costs</b>",
+      "Converted more than 100 coffeescript files into typescript resulting in a speed increase in developer productivity and a reduction in typing errors. <b>Impacted +40 developers and translated into a development speed increase since developers are more familiar with ts</b>",
+      "<i>Technologies: Kafka, CI tools, Cypress, Typescript, Coffeescript, Elasticsearch, Opensearch, AWS, DerbyJS, ShareDB, MongoDB, Figma, Kibana, Opensearch Dashboards, Jira, Confluence.</i>",
     ],
   },
   other: [
     {
       company: {
-        name: "HadaMenu.com",
+        name: "Hada Menú",
       },
       position: {
         name: "Software Engineer and Cofounder",
@@ -105,32 +88,22 @@ const experience = {
         name: "Mexico",
         type: "Remote",
       },
-      description: ["In progress..."],
-    },
-    {
-      company: {
-        name: "RevSteer.com",
-        additionalInfo: "Founded by BeMusical.us",
-      },
-      position: {
-        name: "Full-Stack Engineer and Team Lead",
-        startedAt: 2019,
-        endedAt: 2020,
-      },
-      location: {
-        name: "San Francisco",
-        type: "Remote",
-      },
       description: [
-        "I led the team to create a new web app using the same architecture, frameworks and languages used at BeMusical.",
+        "API working that handles authentication actions.",
+        "Traductions are handled in English and Spanish and automatically set depending on the configurations of the client.",
+        "Carts are done by table that allows customers to order at the same time on different phones.",
+        "Orders are displayed on the kitchen's screens as soon as the customer sends orders.",
+        'Users can navigate on restaurants’ menus. <a href="https://hadamenu.com/k/19904033-de45-40a4-a782-72314d4c214d?table=1" target="_blank">Demo here</a>',
+        "<i>Technologies: Typescript, React, Laravel, PHP, Shared hosting, Golang, Expo / React Native, Bash</i>",
       ],
     },
     {
       company: {
-        name: "BeMusical.us",
+        name: "BeMusical",
+        additionalInfo: "RevSteer, too",
       },
       position: {
-        name: "Full-Stack Engineer",
+        name: "Full-Stack Engineer and Team Lead (both projects)",
         startedAt: 2017,
         endedAt: 2020,
       },
@@ -139,18 +112,19 @@ const experience = {
         type: "Remote",
       },
       description: [
-        "Developed backend with current traffic of 1,600 users/month, PHP (Laravel), Redis.",
-        "Developed frontend with Adobe XD, JS (React, Redux), CSS (Bootstrap).",
-        "Git manager working collaboratively with 10 team members.",
-        "Designed and builded automated systems to manage our scalable infrastructure on AWS, Digital Ocean, MySQL.",
-        "Developed the payments platform integrating Stripe API.",
-        "Migrated platforms from Laravel to Django and MySQL to PostgreSQL.",
-        "I was in charge of a web development team where it grew from 1 (me) developer to 10 developers in a year and a half. Also, we built 2 websites with more than 5 main features in each one, and all code supervised by me directly.",
+        "Developed API + Front End page with traffic of 1,600 users/month.",
+        "Designed and built automated systems to manage our scalable infrastructure on AWS",
+        "Developed the payments feature that allows musicians to request payouts manually on demand",
+        "Users can navigate the musicians' page which shows off capabilities, timing, and work.",
+        "Grew from 1 to 10 developers in a year and a half. Also, built 2 (revsteer and bemusical) websites with more than 5 main features in each one, and all code was supervised by me directly.",
+        `<a href="https://docs.google.com/presentation/d/1frO9ymWlxyrndom5AsuRt-IzgPAxGKKpheNNdDGF3LU/edit?usp=sharing" target="_blank">BeMusical Work</a>`,
+        `<a href="https://docs.google.com/presentation/d/1nttcysNaYhCNTjEojd19JNvJSZ70QoHBRp9ux_kEuzc/edit?usp=sharing" target="_blank">RevSteer Work</a>`,
+        "<i>Technologies: Technologies: Django, PostgreSQL, Adobe XD, React, Redux, Bootstrap, AWS, Dedicated servers, Stripe API, Bash, Twilio</i>",
       ],
     },
     {
       company: {
-        name: "Domovolcanico.com",
+        name: "Domovolcanico",
       },
       position: {
         name: "Jr. Full-Stack Engineer",
@@ -162,7 +136,7 @@ const experience = {
         type: "Hybrid",
       },
       description: [
-        "I set up and updated a testing server.(AWS, Digital Ocean, MariaDB).",
+        "I set up and updated a testing server.",
         "I configured git in order to have repos and work collaboratively.",
         "Deploy the latest software development tools to aid development within the rest of the organization.",
         `
@@ -176,6 +150,7 @@ const experience = {
             Portfolio link here
           </a>
         `,
+        "<i>Technologies: AWS, Digital Ocean, MariaDB, Git, Laravel, Bootstrap, JQuery</i>",
       ],
     },
     {
@@ -192,9 +167,10 @@ const experience = {
         type: "Hybrid",
       },
       description: [
-        "Developed firmware for over 10 projects in automation Arduino, PIC.",
-        "Created a website that is currently under maintenance (Laravel and React TS).",
-        "We read 50+ engineering books to create 12 online videos didactic content for over 30k views, including topics: Basics electronics components, Digital electronics and logic design.",
+        "Developed firmware for over 10 hardware projects in automation.",
+        "Created a website that is currently under maintenance.",
+        "Read +50 engineering books to create +10 online videos with didactic content for over 30k views, including topics: Basics electronics components, Digital electronics, and logic design.",
+        "<i>Technologies: Arduino, PICs, FPGAs, Bluetooth, MQTT protocol, Golang, HTMX, Bash</i>",
       ],
     },
   ],
@@ -252,141 +228,97 @@ const experience = {
   ],
 };
 
-const preferredProgrammingLanguages = {
-  typescript: 75,
-  go: 10,
-  rust: 10,
-};
-
 const portfolio = [
-  [
-    {
-      imageSource: portfolioGolangAlgoritms,
-      title: "Golang Algorithms",
-      description: "",
-      hashtags: ["#go", "#golang", "#gopher"],
-      date: "10/30/2020",
-      link: "https://github.com/cjairm/go/tree/master/Algorithms-Go",
-    },
-    {
-      imageSource: portfolioPokemonProject,
-      title: "Pokemon app",
-      description: "",
-      hashtags: ["#react_native", "#styled_components", "#laravel"],
-      date: "10/12/2020",
-      link: "https://github.com/cjairm/Pokedex-ReactNative",
-    },
-    {
-      imageSource: portfolioPetLoversProject,
-      title: "Pet Lovers Site",
-      description: "",
-      hashtags: ["#reactJS", "#laravel", "#docker", "#scss", "#bootstrap"],
-      date: "09/19/2020",
-      link: "https://github.com/cjairm/Laravel/tree/main/Projects/pet-lovers",
-    },
-  ],
-  [
-    {
-      imageSource: portfolioPlantsProject,
-      title: "Plant control Site",
-      description: "",
-      hashtags: ["#reactTS", "#scss", "#bootstrap"],
-      date: "09/25/2020",
-      link: "https://github.com/cjairm/typescript/tree/master/Projects/PlantsProject",
-    },
-    {
-      imageSource: portfolioIotProject,
-      title: "IoT Project",
-      description: "",
-      hashtags: ["#HTTP", "#REST", "#lora", "#atmega328"],
-      date: "06/10/2020",
-      link: "https://drive.google.com/file/d/1GzFDHXi6O5YXam0atFlYf-rgQgTXk4yg/view?usp=sharing",
-    },
-    {
-      imageSource: portfolioClockProject,
-      title: "Clock Project",
-      description: "",
-      hashtags: ["#vanilla", "#javascript"],
-      date: "06/21/2020",
-      link: "https://github.com/cjairm/javascript/tree/master/Projects/Clock",
-    },
-  ],
-  [
-    {
-      imageSource: portfolioRobotProject,
-      title: "Robot Simulator Project",
-      description: "",
-      hashtags: ["#react", "#materialUI"],
-      date: "01/20/2020",
-      link: "https://github.com/cjairm/javascript/tree/master/Projects/testing-robot",
-    },
-    {
-      imageSource: portfolioFlickrBootstrapProject,
-      title: "Flickr Project 1",
-      description: "",
-      hashtags: ["#vanilla", "#javascript", "#bootstrap"],
-      date: "06/21/2020",
-      link: "https://github.com/cjairm/javascript/tree/master/Projects/vanilla-app-flickr",
-    },
-    {
-      imageSource: portfolioFlickrMaterialProject,
-      title: "Flickr Project 2",
-      description: "",
-      hashtags: ["#react", "#materialUI"],
-      date: "06/21/2020",
-      link: "https://github.com/cjairm/javascript/tree/master/Projects/react-app-flickr",
-    },
-  ],
-  [
-    {
-      imageSource: portfolioFpgaProject,
-      title: "FPGA Project",
-      description: "",
-      hashtags: ["#FPGA", "#spartan6", "#xilinx"],
-      date: "06/27/2017",
-      link: "https://drive.google.com/file/d/1J6Lt8POaS26J_GRc2AlSdFf57-HILpG_/view",
-    },
-    {
-      title: "This project",
-      description: "Designed and developed by me. You can reuse the template",
-      hashtags: ["#bulma", "#react", "#ts"],
-      date: "03/xx/2023",
-      link: "https://github.com/cjairm/cjairm.github.io/tree/master/code",
-    },
-  ],
+  {
+    title: "@cjairm’s website",
+    description: [
+      'Designed and developed by me. You can reuse the template that can be downloaded from <a class="is-link is-inverted" href="https://github.com/cjairm/cjairm.github.io/tree/master/code" target="_blank">here</a>',
+      "<i>Technologies: React and Typescript</i>",
+    ],
+  },
+  {
+    title: "Golang + HTMX",
+    size: "is-5",
+    description: [
+      "Using different approaches for fun to create multipurpose programs, such as, user authentication, web sockets, session and cookie manage; and todo app.",
+      "<i>Technologies: Golang (Gin, Gorilla, Fiber, Native library), HTMX</i>",
+    ],
+  },
+  {
+    title: "FPGA",
+    description: [
+      'Gave support to the community that starts with FPGA programming with basic knowledge. You can find more info about the project <a class="is-link is-inverted" href="https://drive.google.com/file/d/1J6Lt8POaS26J_GRc2AlSdFf57-HILpG_/view" target="_blank">here</a>.',
+      "<i>Technologies: FPGA, VHDL, Hardware</i>",
+    ],
+  },
+  {
+    title: "Expo / React Native / Native Android",
+    size: "is-full",
+    description: [
+      'Created a pokemon app for fun. You can find code <a class="is-link is-inverted" href="https://github.com/cjairm/Pokedex-ReactNative" target="_blank">here</a>',
+      'Created apps for Hada Menu (restaurants & customers). Code lives in a private channel. <a class="is-link is-inverted" href="https://docs.google.com/presentation/d/1lHxqJpty9kPD50pw1rRD33a-SAxM2k6-UIHHslrUhBI/edit?usp=sharing" target="_blank">More details</a>',
+      'Created a GPS tracker + built the hardware. An example <a class="is-link is-inverted" href="https://docs.google.com/presentation/d/1UA3PMfzophC1ULhoQTpZkL2c3kaGRchicPZojMuVpZY/edit?usp=sharing" target="_blank">here</a>',
+      "<i>Technologies: Laravel, Expo / React Native, Android Studio</i>",
+    ],
+  },
 ];
 
-const otherProgrammingLanguages = [
+const backendSkills = [
   {
-    "PHP (Laravel)": 50,
-    "Bootstrap / Material UI / Bulma": 90,
-    docker: 30,
-    go: preferredProgrammingLanguages.go,
+    "PHP (Laravel)": 60,
+    "Bootstrap / Material UI / Bulma": 50,
+    docker: 35,
+    go: 60,
   },
   {
     Redis: 45,
-    Django: 55,
+    Django: 45,
     "C/C++": 35,
-    rust: preferredProgrammingLanguages.rust,
+    rust: 15,
   },
   {
     "DerbyJS / ShareDB": 55,
     "Relational Data Bases": 45,
     "Non-Relational Data Bases": 45,
-    "React / React Native / Redux": 75,
+    "React / React Native / Redux": 65,
   },
   {
-    wasm: preferredProgrammingLanguages.rust,
+    wasm: 15,
+    typescript: 75,
+  },
+];
+
+const fullstackSkills = [
+  {
+    "PHP (Laravel)": 50,
+    "Bootstrap / Material UI / Bulma": 80,
+    docker: 20,
+    go: 50,
+  },
+  {
+    Redis: 45,
+    Django: 35,
+    "C/C++": 35,
+    rust: 10,
+  },
+  {
+    "DerbyJS / ShareDB": 55,
+    "Relational Data Bases": 45,
+    "Non-Relational Data Bases": 45,
+    "React / React Native / Redux": 80,
+  },
+  {
+    wasm: 25,
+    typescript: 75,
   },
 ];
 
 const appData = {
   personal,
-  header,
   experience,
-  preferredProgrammingLanguages,
   portfolio,
-  otherProgrammingLanguages,
+  fullstackSkills,
+  backendSkills,
 };
 
 export default appData;

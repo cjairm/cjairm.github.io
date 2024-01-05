@@ -4,7 +4,7 @@ import Section from "../layout/Section";
 import appData from "../app.data";
 
 const ExperienceItem: React.FunctionComponent<any> = (
-  props
+  props,
 ): React.ReactElement => {
   const companyName = props.company?.name;
   const joinedAt = props.position?.startedAt;
@@ -60,7 +60,7 @@ const ExperienceItem: React.FunctionComponent<any> = (
 };
 
 const SchoolItem: React.FunctionComponent<any> = (
-  props
+  props,
 ): React.ReactElement => {
   const degreeName = props.degreeName;
   const schoolName = props.schoolName;
@@ -103,11 +103,13 @@ const ResumeSection: React.FunctionComponent = (): React.ReactElement => {
           {appData.experience.introduction?.map(
             (paragraph: string, i: number) => {
               return (
-                <p key={i} className="has-text-centered">
-                  {paragraph}
-                </p>
+                <p
+                  key={i}
+                  className="has-text-centered"
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                ></p>
               );
-            }
+            },
           )}
         </div>
       </div>
