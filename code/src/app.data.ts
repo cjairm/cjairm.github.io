@@ -261,6 +261,24 @@ const portfolio = [
       "<i>Technologies: Laravel, Expo / React Native, Android Studio</i>",
     ],
   },
+  {
+    title: "Laravel CLI",
+    size: "is-3",
+    description: [
+      'Command that sets up a new Laravel template using Docker',
+      '<a class="is-link is-inverted" href="https://github.com/cjairm/laravel-cli" target="_blank">Usage</a>',
+      "<i>Technologies: Golang</i>",
+    ],
+  },
+  {
+    title: "New grep",
+    size: "is-3",
+    description: [
+      'Command that searches for words in files within a folder',
+      '<a class="is-link is-inverted" href="https://github.com/cjairm/cgrep" target="_blank">Usage</a>',
+      "<i>Technologies: Golang</i>",
+    ],
+  },
 ];
 
 const backendSkills = [
