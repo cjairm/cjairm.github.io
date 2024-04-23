@@ -56,7 +56,7 @@ const experience = {
       address: "1125 Mission st, San Francisco, CA 94103",
     },
     position: {
-      name: "Software engineer",
+      name: "Lead Software engineer",
       startedAt: 2021,
       endedAt: "Present",
     },
@@ -263,7 +263,7 @@ const portfolio = [
   },
   {
     title: "Laravel CLI",
-    size: "is-3",
+    size: "is-6",
     description: [
       'Command that sets up a new Laravel template using Docker',
       '<a class="is-link is-inverted" href="https://github.com/cjairm/laravel-cli" target="_blank">Usage</a>',
@@ -272,7 +272,7 @@ const portfolio = [
   },
   {
     title: "New grep",
-    size: "is-3",
+    size: "is-6",
     description: [
       'Command that searches for words in files within a folder',
       '<a class="is-link is-inverted" href="https://github.com/cjairm/cgrep" target="_blank">Usage</a>',
