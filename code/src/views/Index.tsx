@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../layout/Navbar";
 import AboutmeSection from "../components/AboutmeSection";
 import ResumeSection from "../components/ResumeSection";
-// import PortfolioSection from "../components/PortfolioSection";
+import PortfolioSection from "../components/PortfolioSection";
 import SkillsSection from "../components/SkillsSection";
 import BackgroundSection from "../components/BackgroundSection";
 import ContactmeSection from "../components/ContactmeSection";
@@ -16,9 +16,7 @@ const Index: React.FunctionComponent = (): React.ReactElement => {
       <AboutmeSection />
       <BackgroundSection />
       <ResumeSection />
-      {/*
       <PortfolioSection />
-      */}
       <SkillsSection />
       <ContactmeSection />
       <Footer />
