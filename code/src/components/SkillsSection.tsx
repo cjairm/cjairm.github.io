@@ -24,8 +24,8 @@ const PortfolioSection: React.FunctionComponent = (): React.ReactElement => {
                   className={`column${item.size ? " " + item.size : ""}`}
                   key={i}
                 >
-                  <div className="box content">
-                    <h4>{item.title}</h4>
+                  <div className="box content has-text-white has-background-dark">
+                    <h4 className="has-text-white">{item.title}</h4>
                     {(item.description as string[])?.map(
                       (paragraph: string, j: number) => (
                         <p
