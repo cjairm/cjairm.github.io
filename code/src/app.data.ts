@@ -236,7 +236,7 @@ const portfolio = [
   {
     title: "@cjairm’s website",
     description: [
-      'Designed and developed by me. You can reuse the template that can be downloaded from <a class="is-link is-inverted" href="https://github.com/cjairm/cjairm.github.io/tree/master/code" target="_blank">here</a>',
+      'Designed and developed by me. You can reuse the template that can be downloaded from <a class="has-text-grey-light is-underlined" href="https://github.com/cjairm/cjairm.github.io/tree/master/code" target="_blank">here</a>',
       "<i>Technologies: React and Typescript</i>",
     ],
   },
@@ -252,7 +252,7 @@ const portfolio = [
     title: "New grep",
     description: [
       "Command that searches for words in files within a folder",
-      '<a class="is-link is-inverted" href="https://github.com/cjairm/cgrep" target="_blank">Usage</a>',
+      '<a class="has-text-grey-light is-underlined" href="https://github.com/cjairm/cgrep" target="_blank">Usage</a>',
       "<i>Technologies: Golang</i>",
     ],
   },
@@ -260,9 +260,9 @@ const portfolio = [
     title: "Expo / React Native / Native Android",
     size: "is-full",
     description: [
-      'Created a pokemon app for fun. You can find code <a class="is-link is-inverted" href="https://github.com/cjairm/Pokedex-ReactNative" target="_blank">here</a>',
-      'Created apps for Hada Menu (restaurants & customers). Code lives in a private channel. <a class="is-link is-inverted" href="https://docs.google.com/presentation/d/1lHxqJpty9kPD50pw1rRD33a-SAxM2k6-UIHHslrUhBI/edit?usp=sharing" target="_blank">More details</a>',
-      'Created a GPS tracker + built the hardware. An example <a class="is-link is-inverted" href="https://docs.google.com/presentation/d/1UA3PMfzophC1ULhoQTpZkL2c3kaGRchicPZojMuVpZY/edit?usp=sharing" target="_blank">here</a>',
+      'Created a pokemon app for fun. You can find code <a class="has-text-grey-light is-underlined" href="https://github.com/cjairm/Pokedex-ReactNative" target="_blank">here</a>',
+      'Created apps for Hada Menu (restaurants & customers). Code lives in a private channel. <a class="has-text-grey-light is-underlined" href="https://docs.google.com/presentation/d/1lHxqJpty9kPD50pw1rRD33a-SAxM2k6-UIHHslrUhBI/edit?usp=sharing" target="_blank">More details</a>',
+      'Created a GPS tracker + built the hardware. An example <a class="has-text-grey-light is-underlined" href="https://docs.google.com/presentation/d/1UA3PMfzophC1ULhoQTpZkL2c3kaGRchicPZojMuVpZY/edit?usp=sharing" target="_blank">here</a>',
       "<i>Technologies: Laravel, Expo / React Native, Android Studio</i>",
     ],
   },
@@ -270,7 +270,7 @@ const portfolio = [
     title: "FPGA",
     size: "is-6",
     description: [
-      'Gave support to the community that starts with FPGA programming with basic knowledge. You can find more info about the project <a class="is-link is-inverted" href="https://drive.google.com/file/d/1J6Lt8POaS26J_GRc2AlSdFf57-HILpG_/view" target="_blank">here</a>.',
+      'Gave support to the community that starts with FPGA programming with basic knowledge. You can find more info about the project <a class="has-text-grey-light is-underlined" href="https://drive.google.com/file/d/1J6Lt8POaS26J_GRc2AlSdFf57-HILpG_/view" target="_blank">here</a>.',
       "<i>Technologies: FPGA, VHDL, Hardware</i>",
     ],
   },
@@ -279,7 +279,7 @@ const portfolio = [
     size: "is-6",
     description: [
       "Command that sets up a new Laravel template using Docker",
-      '<a class="is-link is-inverted" href="https://github.com/cjairm/laravel-cli" target="_blank">Usage</a>',
+      '<a class="has-text-grey-light is-underlined" href="https://github.com/cjairm/laravel-cli" target="_blank">Usage</a>',
       "<i>Technologies: Golang</i>",
     ],
   },

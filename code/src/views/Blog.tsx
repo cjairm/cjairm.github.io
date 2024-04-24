@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
@@ -18,61 +18,89 @@ const Blog: React.FunctionComponent = (): React.ReactElement => {
   return (
     <>
       <Navbar />
-      <Section id="blog">
-        {blog.title && (
-          <div className="columns">
-            <div className="column content">
-              <h1 className="title has-text-centered has-text-white">
-                {blog.title}
-              </h1>
-            </div>
-          </div>
-        )}
-        <div className="columns">
-          <div className="column content">
-            {blog.content.map((c, i) => {
-              switch (c.type) {
-                case "blockquote": {
-                  return (
-                    <blockquote
-                      key={i}
-                      className="has-text-white has-background-dark"
-                    >
-                      “{c.quote}”. {c.author}
-                    </blockquote>
-                  );
-                }
-                case "p": {
-                  let p = c.p;
-                  if (c.archors) {
-                    c.archors.forEach((a) => {
-                      if (p) {
-                        p = replaceLinkInP(p, a);
+      <div className="columns is-centered has-background-light">
+        <div className="column is-10">
+          <Section id="blog">
+            <nav
+              className="breadcrumb has-succeeds-separator"
+              aria-label="breadcrumbs"
+            >
+              <ul>
+                <li>
+                  <Link to="/" className="has-text-white">
+                    Back
+                  </Link>
+                </li>
+                <li className="is-active">
+                  <a
+                    href="#!"
+                    aria-current="page"
+                    className="has-text-grey-light"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            {blog.title && (
+              <div className="columns">
+                <div className="column is-12 content">
+                  <h1 className="title has-text-centered has-text-white">
+                    {blog.title}
+                  </h1>
+                </div>
+              </div>
+            )}
+            <div className="columns">
+              <div className="column is-12 content">
+                {blog.content.map((c, i) => {
+                  switch (c.type) {
+                    case "blockquote": {
+                      return (
+                        <blockquote
+                          key={i}
+                          className="has-text-white has-background-dark"
+                        >
+                          “{c.quote}”. {c.author}
+                        </blockquote>
+                      );
+                    }
+                    case "p": {
+                      let p = c.p;
+                      if (c.archors) {
+                        c.archors.forEach((a) => {
+                          if (p) {
+                            p = replaceLinkInP(p, a);
+                          }
+                        });
                       }
-                    });
+                      return (
+                        <p
+                          key={i}
+                          dangerouslySetInnerHTML={{ __html: p ? p : "" }}
+                        ></p>
+                      );
+                    }
+                    case "code": {
+                      return (
+                        <pre
+                          key={i}
+                          className="has-text-white has-background-dark"
+                        >
+                          {c.pre}
+                        </pre>
+                      );
+                    }
+                    default: {
+                      return <></>;
+                    }
                   }
-                  return (
-                    <p
-                      key={i}
-                      dangerouslySetInnerHTML={{ __html: p ? p : "" }}
-                    ></p>
-                  );
-                }
-                case "code": {
-                  return (
-                    <pre key={i} className="has-text-white has-background-dark">
-                      {c.pre}
-                    </pre>
-                  );
-                }
-                default: {
-                  return <></>;
-                }
-              }
-            })}
-          </div>
+                })}
+              </div>
+            </div>
+          </Section>
         </div>
-      </Section>
+      </div>
       <Footer />
     </>
   );
