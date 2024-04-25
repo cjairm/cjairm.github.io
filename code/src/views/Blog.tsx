@@ -18,7 +18,7 @@ const Blog: React.FunctionComponent = (): React.ReactElement => {
   return (
     <>
       <Navbar />
-      <div className="columns is-centered has-background-light">
+      <div className="columns is-centered has-background-light is-gapless">
         <div className="column is-10">
           <Section id="blog">
             <nav
