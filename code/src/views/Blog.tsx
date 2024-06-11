@@ -65,6 +65,17 @@ const Blog: React.FunctionComponent = (): React.ReactElement => {
                         </blockquote>
                       );
                     }
+                    case "img": {
+                      const anyContent = c as any;
+                      return (
+                        <figure key={i}>
+                          <img src={anyContent.src} alt={anyContent.alt} />
+                          {anyContent.caption ? (
+                            <figcaption>{anyContent.caption}</figcaption>
+                          ) : null}
+                        </figure>
+                      );
+                    }
                     case "p": {
                       let p = c.p;
                       if (c.archors) {
@@ -82,13 +93,18 @@ const Blog: React.FunctionComponent = (): React.ReactElement => {
                       );
                     }
                     case "code": {
+                      const anyContent = c as any;
                       return (
-                        <pre
-                          key={i}
-                          className="has-text-white has-background-dark"
-                        >
-                          {c.pre}
-                        </pre>
+                        <>
+                          {anyContent.pre ? (
+                            <pre
+                              key={i}
+                              className="has-text-white has-background-dark"
+                            >
+                              {anyContent.pre}
+                            </pre>
+                          ) : null}
+                        </>
                       );
                     }
                     default: {

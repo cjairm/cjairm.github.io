@@ -370,7 +370,7 @@ document.body.addEventListener("htmx:beforeSwap", function (e) {
     ],
   },
   "golang-como-cambie-de-typescript": {
-    title: "Golang, ¿cómo cambié de TypeScript?",
+    title: "Golang, ¿cómo cambié de TypeScript? (spanish version of previous)",
     content: [
       {
         type: "blockquote",
@@ -699,6 +699,274 @@ c, err := r.Cookie("session_token")
       {
         type: "p",
         p: "Considerándolo todo, tuve una gran experiencia trabajando en un gran proyecto usando HTMX y Golang. Me costó mucho trabajar con tipos, pero siempre fue útil echar un vistazo a la documentación, supongo que eso sucedió porque mi forma de pensar era Typecript.",
+      },
+    ],
+  },
+  "how-did-i-configure-my-raspberry-pi": {
+    title: "How did I configure my Raspberry pi?",
+    content: [
+      {
+        type: "blockquote",
+        quote:
+          "If something is important enough, or you believe something is important enough, even if you are scared, you will keep going.",
+        author: "Elon Musk",
+      },
+      {
+        type: "p",
+        archors: [
+          {
+            href: "https://scratch.mit.edu/search/projects?q=python",
+            text: "Scratch",
+          },
+        ],
+        p: `Have you heard about the Raspberry Pi? I am pretty sure you have. In case you have not. It's a mini computer that was created to provide a tool for teaching computer science in schools. I remember it had "<-a->" installed by default. Raspberry Pi Foundation released the first model in 2012. Pretty quickly gained popularity and the board was used for different projects, like robotics stuff. I was more involved in that area at that time. Now, I am trying to go back to my roots 😀.`,
+      },
+      {
+        type: "p",
+        p: "I am a mechatronics engineer, and I am very passionate about hardware and robotics. I knew of the existence of this thing years ago while trying to do fun stuff during school. I did my baby steps, configuring servers to put up my first web page using PHP. Now, I’m coming back to see what can be done with this cheap and easy-to-use computer.",
+      },
+      {
+        type: "p",
+        p: "Why did I choose a Raspberry Pi instead of a microcontroller if I wanted to go back to my roots?. Well, there is no microcontroller can do what a Raspberry Pi can do, and the inverse is also true if you try to use the Raspberry Pi as an “advanced” microcontroller, so they are not interchangeable. They can complement each other, but they are different things.",
+      },
+      {
+        type: "p",
+        archors: [
+          {
+            href: "https://www.raspberrypi.com/products/raspberry-pi-zero-w/",
+            text: "Raspberry Pi Zero W",
+          },
+        ],
+        p: `For example, the <-a-> (which is the one I will be using) has a 1 GHz single-core CPU that allows it to run various operating systems such as Linux, Android and Windows 10. It also has some GPIO pins ("Input and general purpose output") that allow us to do whatever we want with them. For IoT projects it makes it a little bit slower and unviable, since it takes up to 15 seconds to start + the excessive amount of power used due to its greater processing capabilities and extra components (compared to a microcontroller). Since it will be used as a server, we don't care about that for now.`,
+      },
+      {
+        type: "img",
+        src: "/images/3/1.png",
+        alt: "needed things",
+      },
+      {
+        type: "p",
+        archors: [
+          {
+            href: "https://www.raspberrypi.com/tutorials/",
+            text: "their official page",
+          },
+          {
+            href: "https://www.raspberrypi.com/software/",
+            text: "Raspberry Pi Imager",
+          },
+        ],
+        p: `I already have some projects in mind. This document is about how to configure the Raspberry Pi and not about future projects, so for now, I can say that I will use it as a bridge across IoT devices (as broker). If you are curious, you can always take a look at <-a-> and find some interesting projects. Well, a lot of blah blah blah... let's start downloading the <-a-> that will install our SD with the system operative that will be used by the Raspberry Pi computer.`,
+      },
+      {
+        type: "img",
+        src: "/images/3/2.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "I am using a Raspberry Pi Zero W, so that's what I am choosing in the Imager I just downloaded.",
+      },
+      {
+        type: "img",
+        src: "/images/3/3.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "img",
+        src: "/images/3/4.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "As an operative system, I choose a light one because I won’t be accessing it using a monitor and all that stuff on my own. I want this Raspberry Pi to work as a server. It’s the reason I picked no desktop env.",
+      },
+      {
+        type: "img",
+        src: "/images/3/5.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "Then, when clicking next, we should edit the initial configuration. I added my local Wi-Fi configuration to make sure I could access it through my local router.",
+      },
+      {
+        type: "img",
+        src: "/images/3/6.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: 'Something super useful that is part of the new Imager (I did not have access to this feature when I was in college) is where we are able to set a "domain name" (pi.local). To give more context on why this is helpful… Most likely, your home network uses DHCP IP assignments, which means that each time a device leaves the network and returns, a new IP address is assigned to it. Even if you set a static IP for a frequently used device (e.g., you set your Raspberry Pi computer to always be assigned to number 192.168.1.99 - without being reassigned), you still have to remember that entirely unintuitive number in your memory. Further, if you ever need to change the number for any reason, you would have to remember a brand new one in its place.',
+      },
+      {
+        type: "p",
+        p: "In terms of services configuration, please do not forget to enable SSH (it happened to me the first time and I had to re-install the operating system). I’m setting up my personal public-key authentication to make sure I’m the only one who has access to the Raspberry Pi automatically without a password.",
+      },
+      {
+        type: "img",
+        src: "/images/3/7.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "It should be everything ready to install our image in the SD. After finishing, we need to test that the Raspberry Pi is up and running to start playing with it. Currently, I am using a Mac computer, so I was able to use the `ping` command (if you want to know more about it, do `man ping` to display documentation). Using `ping pi.local -i 1 -c 5` should tell us if the Raspberry Pi is responding to our requests, which means it is ready.",
+      },
+      {
+        type: "img",
+        src: "/images/3/8.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "If everything looks good, we can do:",
+      },
+      {
+        type: "code",
+        pre: "ssh cjairm@pi.local",
+      },
+      {
+        type: "img",
+        src: "/images/3/9.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "All in all, what started as (I want to imagine) a charitable project to bring computers to teach computer science became something wider. Now, it is part of geeks' (like me) lives that can be easily used and configured with minimal research.",
+      },
+    ],
+  },
+  "como-configure-mi-raspberry-pi": {
+    title: "¿Cómo configuré mi Raspberry Pi? (spanish version of previous)",
+    content: [
+      {
+        type: "blockquote",
+        quote:
+          "Si algo es lo suficientemente importante, o si crees que algo es lo suficientemente importante, incluso si tienes miedo, seguirás adelante",
+        author: "Elon Musk",
+      },
+      {
+        type: "p",
+        archors: [
+          {
+            href: "https://scratch.mit.edu/search/projects?q=python",
+            text: "Scratch",
+          },
+        ],
+        p: `¿Has escuchado hablar de la Raspberry Pi? Estoy bastante seguro de que si. En caso de que no lo hayas hecho, esta es una mini computadora que fue creada para proporcionar una herramienta para la enseñanza de informática en las escuelas. Recuerdo que tenía instalado "<-a->" por defecto. La Fundación Raspberry Pi lanzó el primer modelo en 2012. Rápidamente, ganó popularidad y la tarjeta se empezó a usar en diferentes proyectos, como robótica. Yo estaba más involucrado en esa área en ese momento. Ahora estoy intentando volver a mis raíces 😀.`,
+      },
+      {
+        type: "p",
+        p: "Soy ingeniero en mecatrónica y me apasiona mucho el hardware y la robótica. Sabía de la existencia de esto hace años mientras intentaba hacer cosas divertidas en la escuela. Di mis primeros pasos, configurando servidores para montar mi primera página web usando PHP. Ahora vuelvo para ver lo que es capaz de hacer esta “computadorsita”.",
+      },
+      {
+        type: "p",
+        p: '¿Por qué elegí una Raspberry Pi en lugar de un microcontrolador si quería volver a mis raíces? Bueno, no hay ningún microcontrolador que pueda hacer lo que puede hacer una Raspberry Pi, y lo contrario también si intentas usar la Raspberry Pi como un microcontrolador más "avanzado", por lo que no son intercambiables. Pueden complementarse, pero son cosas diferentes.',
+      },
+      {
+        type: "p",
+        archors: [
+          {
+            href: "https://www.raspberrypi.com/products/raspberry-pi-zero-w/",
+            text: "Raspberry Pi Zero W",
+          },
+        ],
+        p: `Por ejemplo, la <-a-> (que es la que usaré para este proyecto) tiene una CPU de un solo núcleo de 1 GHz que permite ejecutar varios sistemas operativos como Linux, Android y Windows 10. También tiene algunos pines GPIO ("Entrada y salida de uso general") que nos permiten hacer lo que queramos con ellos. Lo que para proyectos IoT la hace un poco más lenta e inviable, ya que tarda hasta 15 segundos en arrancar + la excesiva cantidad de corriente utilizada por sus mayores capacidades de procesamiento y componentes extras (comparándolo con un microcontrolador). Dado que será usada como un servidor, eso no nos importa por ahora.`,
+      },
+      {
+        type: "img",
+        src: "/images/3/1.png",
+        alt: "needed things",
+      },
+      {
+        type: "p",
+        archors: [
+          {
+            href: "https://www.raspberrypi.com/tutorials/",
+            text: "página oficial",
+          },
+          {
+            href: "https://www.raspberrypi.com/software/",
+            text: "Raspberry Pi Imager",
+          },
+        ],
+        p: `Ya tengo algunos proyectos en mente, pero este documento trata sobre cómo configurar Raspberry Pi y no sobre proyectos futuros, por lo que, por ahora, puedo decir que lo usaré como puente entre dispositivos IoT (bróker). Si tienes curiosidad, puedes echar un vistazo a su <-a-> y encontrar algunos proyectos interesantes. Bueno, mucho bla, bla, bla y poca acción... Empecemos a descargar el <-a-> que instalará en nuestro SD con el sistema operativo que utilizará el ordenador Raspberry Pi.`,
+      },
+      {
+        type: "img",
+        src: "/images/3/2.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "Estoy usando una Raspberry Pi Zero W, así que eso es lo que elijo en el programa que acabo de descargar.",
+      },
+      {
+        type: "img",
+        src: "/images/3/3.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "img",
+        src: "/images/3/4.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "Como sistema operativo, elegiré el ligero porque no accederé a él mediante un monitor y todo eso por mi cuenta. Quiero que esta Raspberry Pi funcione como servidor. Es la razón por la que no elegí ningún entorno de escritorio.",
+      },
+      {
+        type: "img",
+        src: "/images/3/5.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: 'Luego, al hacer clic en "next", debemos editar la configuración inicial. Agregué mi configuración de wifi local para asegurarme de poder acceder a ella a través de mi enrutador local.',
+      },
+      {
+        type: "img",
+        src: "/images/3/6.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: 'Algo súper útil que forma parte del nuevo Raspberry Pi Imager (no tenía acceso a esta función cuando estaba en la universidad) es donde podemos establecer un "nombre de dominio" (pi.local). Para dar más contexto del porqué, es una herramienta super útil... Lo más probable es que su red doméstica utilice asignaciones de IP DHCP, lo que significa que cada vez que un dispositivo sale de la red y regresa, se le asigna una nueva dirección IP. Incluso si configura una IP estática para cualquier dispositivo (por ejemplo, configura su computadora Raspberry Pi para que siempre esté asignada al número 192.168.1.99, sin ser reasignada), aún debe recordar ese número completamente poco intuitivo. Además, si alguna vez necesita cambiar el número por algún motivo, deberá recordar uno nuevo en su lugar.',
+      },
+      {
+        type: "p",
+        p: "En cuanto a la configuración de servicios, no olvides habilitar SSH (a mí me pasó la primera vez y tuve que reinstalar el sistema operativo). Estoy configurando mi public-key para poder ser autenticado. Además de que seré el único que tiene acceso a la Raspberry Pi automáticamente sin contraseña.",
+      },
+      {
+        type: "img",
+        src: "/images/3/7.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "Debería estar todo para instalar nuestra imagen a la tarjeta SD. Después de finalizar, debemos probar que la Raspberry Pi está en funcionamiento para comenzar a jugar con ella. Actualmente, estoy usando una computadora Mac, por lo que pude usar el comando `ping` (si quieres saber más al respecto, haz `man ping` para mostrar la documentación). El uso de `ping pi.local -i 1 -c 5` debería decirnos si Raspberry Pi está respondiendo a nuestras solicitudes, lo que significa que está listo.",
+      },
+      {
+        type: "img",
+        src: "/images/3/8.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "Deberíamos estar listos para poder ejecutar:",
+      },
+      {
+        type: "code",
+        pre: "ssh cjairm@pi.local",
+      },
+      {
+        type: "img",
+        src: "/images/3/9.png",
+        alt: "Raspberry Pi Imager",
+      },
+      {
+        type: "p",
+        p: "En conclusión, lo que comenzó como (me imagino) un proyecto benéfico para llevar computadoras y enseñar informática se convirtió en algo más amplio. Ahora, es parte de la vida de geeks (como yo) y podemos usarla y configurarla fácilmente con mínima inversión de tiempo.",
       },
     ],
   },
