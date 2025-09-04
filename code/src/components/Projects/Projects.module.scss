@@ -1,0 +1,284 @@
+@use '../../styles/variables' as v;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 v.$spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-xl;
+  
+  @media (min-width: v.$breakpoint-md) {
+    padding: 0 v.$spacing-lg;
+  }
+  
+  @media (min-width: v.$breakpoint-lg) {
+    padding: 0 v.$spacing-xl;
+  }
+}
+
+.headingContainer {
+  position: relative;
+  margin-bottom: v.$spacing-lg;
+}
+
+.heading {
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-2xl;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-text-primary;
+  margin-bottom: v.$spacing-sm;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-3xl;
+  }
+}
+
+.headingUnderline {
+  width: 60px;
+  height: 3px;
+  background-color: v.$color-accent;
+  margin-top: v.$spacing-xs;
+  border-radius: v.$border-radius-sm;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.2s forwards;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$spacing-2xl;
+  
+  @media (min-width: v.$breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: v.$breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$spacing-3xl v.$spacing-2xl;
+  }
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: v.$border-radius-lg;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: v.$shadow-sm;
+  transition: transform v.$transition-base, box-shadow v.$transition-base;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  
+  &:nth-child(even) {
+    animation-delay: 0.2s;
+  }
+  
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  &:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: v.$shadow-lg;
+  }
+  
+  &:focus-within {
+    outline: 2px solid v.$color-accent;
+    box-shadow: v.$shadow-lg;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.1) 100%);
+    pointer-events: none;
+  }
+}
+
+.projectImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform v.$transition-slow;
+  
+  .projectCard:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.cardContent {
+  padding: v.$spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-md;
+  flex: 1;
+}
+
+.projectTitle {
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-xl;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-text-primary;
+  margin: 0;
+  line-height: v.$line-height-tight;
+}
+
+.projectRole {
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-medium;
+  color: v.$color-accent;
+  margin: 0;
+  margin-bottom: v.$spacing-sm;
+}
+
+.projectSummary {
+  font-size: v.$font-size-base;
+  line-height: v.$line-height-base;
+  color: v.$color-text-primary;
+  margin: 0;
+  
+  // Ensure summary doesn't exceed 3 lines
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stackContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$spacing-xs;
+  margin-top: v.$spacing-sm;
+}
+
+.stackItem {
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-sm;
+  padding: v.$spacing-xs v.$spacing-sm;
+  background-color: rgba(v.$color-accent, 0.1);
+  color: v.$color-accent;
+  border-radius: v.$border-radius-sm;
+  white-space: nowrap;
+}
+
+.outcomesContainer {
+  margin-top: v.$spacing-sm;
+}
+
+.outcomesTitle {
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-medium;
+  color: v.$color-text-primary;
+  margin: 0 0 v.$spacing-sm 0;
+}
+
+.outcomesList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-xs;
+}
+
+.outcomeItem {
+  position: relative;
+  padding-left: v.$spacing-lg;
+  font-size: v.$font-size-sm;
+  color: v.$color-text-secondary;
+  line-height: v.$line-height-base;
+  
+  &::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: v.$color-accent;
+    font-family: v.$font-family-mono;
+    opacity: 0.8;
+  }
+}
+
+.linksContainer {
+  margin-top: v.$spacing-md;
+  display: flex;
+  gap: v.$spacing-md;
+}
+
+.primaryLink, .secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: v.$spacing-sm v.$spacing-lg;
+  border-radius: v.$border-radius-md;
+  font-weight: v.$font-weight-medium;
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-sm;
+  transition: background-color v.$transition-base, transform v.$transition-base, box-shadow v.$transition-base;
+  min-height: 44px; // Ensure minimum touch target size
+  
+  &:focus-visible {
+    outline: 2px solid v.$color-accent;
+    outline-offset: 2px;
+  }
+}
+
+.primaryLink {
+  background-color: v.$color-accent;
+  color: white;
+  
+  &:hover, &:focus {
+    background-color: v.$color-accent-hover;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: v.$shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: v.$shadow-sm;
+  }
+}
+
+.secondaryLink {
+  background-color: transparent;
+  color: v.$color-text-primary;
+  border: 1px solid rgba(v.$color-text-primary, 0.2);
+  
+  &:hover, &:focus {
+    background-color: rgba(v.$color-text-primary, 0.05);
+    color: v.$color-text-primary;
+    border-color: v.$color-text-primary;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}

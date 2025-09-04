@@ -1,0 +1,117 @@
+@use '../../styles/variables' as v;
+
+.footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: v.$spacing-xl v.$spacing-md;
+  margin-top: v.$spacing-2xl;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-lg;
+  
+  @media (min-width: v.$breakpoint-md) {
+    gap: v.$spacing-xl;
+  }
+}
+
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$spacing-md v.$spacing-lg;
+  justify-content: center;
+  
+  @media (min-width: v.$breakpoint-md) {
+    justify-content: flex-start;
+  }
+}
+
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$spacing-md v.$spacing-lg;
+  justify-content: center;
+  
+  @media (min-width: v.$breakpoint-md) {
+    justify-content: flex-end;
+  }
+}
+
+.link {
+  color: v.$color-text-secondary;
+  text-decoration: none;
+  font-size: v.$font-size-sm;
+  position: relative;
+  transition: color v.$transition-base;
+  
+  &:hover, &:focus {
+    color: v.$color-accent;
+    text-decoration: none;
+    
+    &::after {
+      width: 100%;
+    }
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: v.$color-accent;
+    transition: width v.$transition-base;
+  }
+  
+  &:focus-visible {
+    outline: 2px solid v.$color-accent;
+    outline-offset: 2px;
+  }
+}
+
+.copyrightInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$spacing-xs;
+  
+  @media (min-width: v.$breakpoint-md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  font-size: v.$font-size-sm;
+  color: v.$color-text-secondary;
+  margin: 0;
+}
+
+.builtWith {
+  font-size: v.$font-size-sm;
+  color: v.$color-text-secondary;
+  font-family: v.$font-family-mono;
+  margin: 0;
+  opacity: 0.8;
+  
+  @media (min-width: v.$breakpoint-md) {
+    text-align: right;
+  }
+}
+
+// Add subtle animation for links
+@media (prefers-reduced-motion: no-preference) {
+  .link {
+    &:hover {
+      transform: translateY(-1px);
+    }
+    transition: transform v.$transition-base, color v.$transition-base;
+  }
+}

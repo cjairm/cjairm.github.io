@@ -1,0 +1,170 @@
+@use '../../styles/variables' as v;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 v.$spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-2xl;
+  
+  @media (min-width: v.$breakpoint-md) {
+    padding: 0 v.$spacing-lg;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: v.$spacing-3xl;
+  }
+  
+  @media (min-width: v.$breakpoint-lg) {
+    padding: 0 v.$spacing-xl;
+  }
+}
+
+.contentWrapper {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-lg;
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.headingContainer {
+  position: relative;
+  margin-bottom: v.$spacing-md;
+}
+
+.heading {
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-2xl;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-text-primary;
+  margin-bottom: v.$spacing-sm;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-3xl;
+  }
+}
+
+.headingUnderline {
+  width: 60px;
+  height: 3px;
+  background-color: v.$color-accent;
+  margin-top: v.$spacing-xs;
+  border-radius: v.$border-radius-sm;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.2s forwards;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-lg;
+}
+
+.bio {
+  font-size: v.$font-size-lg;
+  line-height: v.$line-height-base;
+  color: v.$color-text-primary;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.3s forwards;
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-xl;
+  }
+}
+
+.credential {
+  font-size: v.$font-size-base;
+  line-height: v.$line-height-base;
+  color: v.$color-text-primary;
+  padding-left: v.$spacing-md;
+  position: relative;
+  border-left: 2px solid v.$color-accent;
+  font-weight: v.$font-weight-medium;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.5s forwards;
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-lg;
+  }
+}
+
+.personal {
+  font-size: v.$font-size-base;
+  line-height: v.$line-height-base;
+  color: v.$color-text-secondary;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.7s forwards;
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-lg;
+  }
+}
+
+.skillsContainer {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: v.$border-radius-lg;
+  padding: v.$spacing-lg;
+  backdrop-filter: blur(10px);
+  box-shadow: v.$shadow-md;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform v.$transition-base, box-shadow v.$transition-base;
+  opacity: 0;
+  animation: fadeInRight 0.8s ease-out 0.3s forwards;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: v.$shadow-lg;
+  }
+}
+
+.skillsHeading {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-sm;
+  margin-bottom: v.$spacing-lg;
+  
+  h3 {
+    font-family: v.$font-family-mono;
+    font-size: v.$font-size-lg;
+    font-weight: v.$font-weight-bold;
+    color: v.$color-text-primary;
+  }
+}
+
+.skillsIcon {
+  font-family: v.$font-family-mono;
+  color: v.$color-accent;
+  font-size: v.$font-size-lg;
+}
+
+.skillsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-md;
+  
+  li {
+    position: relative;
+    padding-left: v.$spacing-lg;
+    font-size: v.$font-size-base;
+    color: v.$color-text-secondary;
+    
+    &::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: v.$color-accent;
+      font-family: v.$font-family-mono;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use '../../styles/variables' as v;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 v.$spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-xl;
+  
+  @media (min-width: v.$breakpoint-md) {
+    padding: 0 v.$spacing-lg;
+  }
+  
+  @media (min-width: v.$breakpoint-lg) {
+    padding: 0 v.$spacing-xl;
+  }
+}
+
+.headingContainer {
+  position: relative;
+  margin-bottom: v.$spacing-md;
+}
+
+.heading {
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-2xl;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-text-primary;
+  margin-bottom: v.$spacing-sm;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-3xl;
+  }
+}
+
+.headingUnderline {
+  width: 60px;
+  height: 3px;
+  background-color: v.$color-accent;
+  margin-top: v.$spacing-xs;
+  border-radius: v.$border-radius-sm;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.2s forwards;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-lg;
+  max-width: 800px;
+}
+
+.paragraph {
+  font-size: v.$font-size-base;
+  line-height: v.$line-height-base;
+  color: v.$color-text-primary;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  
+  &:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  
+  &:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  &:nth-child(3) {
+    animation-delay: 0.7s;
+  }
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-lg;
+  }
+}

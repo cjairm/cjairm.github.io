@@ -1,0 +1,8 @@
+// Section-specific styling
+.aboutSection,
+.workSection,
+.skillsSection,
+.funSection {
+  background-color: transparent; // Keep backgrounds transparent
+  scroll-margin-top: var(--nav-h); // Ensure section clears navbar when scrolled to
+}

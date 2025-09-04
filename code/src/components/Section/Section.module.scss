@@ -1,0 +1,77 @@
+@use '../../styles/variables' as v;
+
+.section {
+  min-height: 100svh; // Use svh (small viewport height) for better iOS compatibility
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: v.$spacing-2xl 0;
+  background-color: transparent; // Keep backgrounds transparent for gradient
+  
+  // Consistent vertical rhythm with padding instead of margins
+  padding: v.$spacing-3xl 0;
+  margin: 0;
+  
+  // Subtle divider for sections after the first
+  &:not(:first-child) {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.05) 20%,
+        rgba(0, 0, 0, 0.05) 80%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+  
+  // iOS fix for 100vh issues
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+  
+  // Responsive adjustments for different viewport sizes
+  @media (max-width: v.$breakpoint-sm) {
+    min-height: unset; // Don't force 100vh on small mobile devices
+    padding: v.$spacing-2xl 0; // Consistent padding on mobile
+  }
+  
+  @media (min-width: v.$breakpoint-lg) {
+    padding: v.$spacing-3xl 0; // Maintain consistent padding on desktop
+  }
+}
+
+.reveal {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px); // Slightly more movement for traditional scrolling
+  transition: opacity 0s, transform 0s;
+  will-change: opacity, transform;
+  
+  // When the section becomes visible
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 
+      opacity 400ms ease-out, // Slower, more natural reveal
+      transform 400ms ease-out;
+  }
+  
+  // Disable animations for users who prefer reduced motion
+  @media screen and (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+}

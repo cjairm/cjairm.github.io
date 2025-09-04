@@ -1,0 +1,150 @@
+@use 'variables' as v;
+
+// Modern CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Define CSS variable for navbar height
+:root {
+    /* Font variables */
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Navigation height for scroll-margin */
+  --nav-h: 80px;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: v.$font-family-base;
+  line-height: v.$line-height-base;
+  height: 100%;
+  
+  // Simple scroll behavior
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; // Better iOS momentum scrolling
+  scroll-padding-top: var(--nav-h);
+  
+  // For browsers that support smooth scrolling
+  @media screen and (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  color: v.$color-text-primary;
+  font-family: v.$font-family-base;
+  font-weight: v.$font-weight-normal;
+  line-height: v.$line-height-base;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  margin: 0; // Ensure no default margins
+  
+  // Global gradient background
+  background: linear-gradient(135deg, v.$gradient-start 0%, v.$gradient-mid 50%, v.$gradient-end 100%);
+  
+  // Apply a subtle radial gradient accent
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: fixed;
+    top: -50%;
+    right: -20%;
+    width: 70%;
+    height: 140%;
+    background: radial-gradient(ellipse at center, v.$gradient-accent 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0.7;
+    z-index: -1;
+    pointer-events: none;
+    animation: pulse 10s ease-in-out infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: v.$font-family-mono;
+  line-height: v.$line-height-mono;
+  letter-spacing: -0.025em;
+}
+
+.monospace {
+  font-family: v.$font-family-mono;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: v.$color-accent;
+  text-decoration: none;
+  transition: color v.$transition-base;
+  
+  &:hover,
+  &:focus {
+    color: v.$color-accent-hover;
+  }
+}
+
+// Focus styles for accessibility
+:focus-visible {
+  outline: 2px solid v.$color-accent;
+  outline-offset: 2px;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 v.$spacing-md;
+  
+  @media (min-width: v.$breakpoint-md) {
+    padding: 0 v.$spacing-lg;
+  }
+  
+  @media (min-width: v.$breakpoint-lg) {
+    padding: 0 v.$spacing-xl;
+  }
+}
+
+// Code-like styling
+.code {
+  font-family: v.$font-family-mono;
+  padding: v.$spacing-xs v.$spacing-sm;
+  background-color: rgba(v.$color-accent, 0.1);
+  border-radius: v.$border-radius-sm;
+  color: v.$color-accent;
+  font-size: 0.9em;
+}

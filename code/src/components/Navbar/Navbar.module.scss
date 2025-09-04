@@ -1,0 +1,185 @@
+@use '../../styles/variables' as v;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-h);
+  background-color: v.$color-bg; // Fully opaque background
+  z-index: 1000;
+  transition: box-shadow v.$transition-base, height v.$transition-base;
+  
+  // Enhanced shadow to prevent visible seams
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  
+  // Force hardware acceleration to prevent seams
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  
+  &.scrolled {
+    height: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Stronger shadow when scrolled
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 v.$spacing-md;
+  
+  @media (min-width: v.$breakpoint-md) {
+    padding: 0 v.$spacing-lg;
+  }
+  
+  @media (min-width: v.$breakpoint-lg) {
+    padding: 0 v.$spacing-xl;
+  }
+}
+
+.logo {
+  font-size: v.$font-size-xl;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-accent;
+  text-decoration: none;
+  transition: transform v.$transition-base;
+  font-family: v.$font-family-mono;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.nav {
+  @media (max-width: v.$breakpoint-md - 1px) {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    width: 100%;
+    background-color: v.$color-bg;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    padding: v.$spacing-md 0;
+    z-index: 900;
+    
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  
+  @media (max-width: v.$breakpoint-md - 1px) {
+    flex-direction: column;
+    align-items: center;
+    gap: v.$spacing-md;
+  }
+  
+  @media (min-width: v.$breakpoint-md) {
+    gap: v.$spacing-lg;
+  }
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-medium;
+  color: v.$color-text-primary;
+  text-decoration: none;
+  position: relative;
+  padding: v.$spacing-xs v.$spacing-xs;
+  transition: color v.$transition-base;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: v.$color-accent;
+    transition: width v.$transition-base;
+  }
+  
+  &:hover,
+  &:focus {
+    color: v.$color-accent;
+    
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 44px; // Increased for better touch target
+  height: 44px; // Increased for better touch target
+  position: relative;
+  z-index: 1010;
+  padding: 0;
+  
+  @media (max-width: v.$breakpoint-md - 1px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menuIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 24px; // Fixed width container
+  height: 18px; // Fixed height for all three bars + gaps
+  
+  &::before,
+  &::after,
+  & > span {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: v.$color-text-primary;
+    transition: background-color 0.2s ease;
+  }
+  
+  .menuToggle.open & {
+    & > span {
+      background-color: transparent;
+    }
+    
+    &::before {
+      transform: translateY(8px) rotate(45deg);
+      background-color: v.$color-accent;
+    }
+    
+    &::after {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: v.$color-accent;
+    }
+  }
+}

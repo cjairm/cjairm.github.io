@@ -1,0 +1,92 @@
+// Colors
+$color-bg: #f9f9f9;
+$color-text-primary: #333333;
+$color-text-secondary: #666666;
+$color-accent: #3b82f6; // A nice blue accent color
+$color-accent-hover: #2563eb; // Slightly darker for hover states
+$color-bg-secondary: #ffffff;
+
+// Gradient Colors
+$gradient-start: #f0f4ff;
+$gradient-mid: #e6f2ff;
+$gradient-end: #f5f8ff;
+$gradient-accent: rgba(59, 130, 246, 0.08); // Light blue accent
+
+// Typography
+$font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-family-mono: 'JetBrains Mono', monospace;
+$font-size-base: 1rem; // 16px
+$font-size-sm: 0.875rem; // 14px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 2rem; // 32px
+$font-size-3xl: 2.5rem; // 40px
+$font-size-4xl: 3rem; // 48px
+$line-height-base: 1.5;
+$line-height-tight: 1.2;
+$line-height-mono: 1.4;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-base: 1rem; // 16px
+$spacing-xs: $spacing-base * 0.25; // 4px
+$spacing-sm: $spacing-base * 0.5; // 8px
+$spacing-md: $spacing-base; // 16px
+$spacing-lg: $spacing-base * 1.5; // 24px
+$spacing-xl: $spacing-base * 2; // 32px
+$spacing-2xl: $spacing-base * 3; // 48px
+$spacing-3xl: $spacing-base * 4; // 64px
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Borders & Shadows
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 8px;
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Transitions
+$transition-base: 0.2s ease-in-out;
+$transition-slow: 0.4s ease-in-out;
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
