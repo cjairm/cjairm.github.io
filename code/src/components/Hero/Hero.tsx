@@ -1,34 +1,34 @@
 import React from "react";
 import styles from "./Hero.module.scss";
 import { handleScrollTo } from "../../utils/scroll";
+import { heroData } from "./heroData";
 
 const Hero: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.name}>James Anderson</h1>
-        <p className={styles.title}>
-          Senior Software Engineer leading high-performance teams
-        </p>
-        <p className={styles.credential}>
-          10+ years building scalable applications for Fortune 500 companies
-        </p>
+        <h1 className={styles.name}>{heroData.name}</h1>
+        <p className={styles.title}>{heroData.title}</p>
+        <p className={styles.credential}>{heroData.credential}</p>
         <a
-          href="#work"
+          href={`#${heroData.ctaLink}`}
           className={styles.cta}
-          onClick={(e) => handleScrollTo(e, "work")}
+          onClick={(e) => handleScrollTo(e, heroData.ctaLink)}
         >
-          View Work
+          {heroData.ctaText}
         </a>
       </div>
       <div className={styles.imageContainer}>
-          <div className={styles.imagePlaceholder} aria-hidden="true">
-            <img src="/src/assets/about-me.jpg" alt="Profile" className={styles.profileImage} />
-          </div>
+        <div className={styles.imagePlaceholder} aria-hidden="true">
+          <img
+            src={heroData.profileImage}
+            alt="Profile"
+            className={styles.profileImage}
+          />
+        </div>
       </div>
     </div>
   );
 };
 
 export default Hero;
-
