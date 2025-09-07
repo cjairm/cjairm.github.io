@@ -12,8 +12,8 @@ export const heroData: HeroData = {
   title: "Engineer Driving Scalable & Innovative Solutions",
   credential:
     "Experienced in architecting and delivering systems that empower teams and elevate user experiences",
-  ctaText: "View Work",
-  ctaLink: "work",
+  ctaText: "View Experience",
+  ctaLink: "experience",
   profileImage: "/src/assets/me.jpg",
 };
 

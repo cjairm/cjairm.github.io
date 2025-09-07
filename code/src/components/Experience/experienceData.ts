@@ -4,8 +4,8 @@ export interface ExperienceItem {
   companyLogo?: string;
   position: string;
   location: string;
-  startDate: string; // Format: "MMM YYYY"
-  endDate: string | "Present"; 
+  startDate: string;
+  endDate: string | "Present";
   description: string;
   achievements: string[];
   technologies: string[];
@@ -13,69 +13,149 @@ export interface ExperienceItem {
 
 export const experienceData: ExperienceItem[] = [
   {
-    id: "exp-1",
-    company: "TechForward Inc.",
-    companyLogo: "https://via.placeholder.com/80",
-    position: "Senior Software Engineer",
-    location: "Chicago, IL",
-    startDate: "Jan 2022",
+    id: "exp-employ",
+    company: "Employ (Lever)",
+    companyLogo: "",
+    position: "Lead Software Engineer",
+    location: "Chicago, IL (Remote)",
+    startDate: "2021",
     endDate: "Present",
-    description: "Leading the development of cloud-native applications and microservices architecture. Collaborating with cross-functional teams to design and implement scalable solutions that drive business value.",
+    description:
+      "Lead engineer across high-impact initiatives spanning integrations, performance optimization, referrals automation, and search infrastructure upgrades.",
     achievements: [
-      "Architected and implemented a real-time data processing pipeline that improved system throughput by 40%",
-      "Led the migration from monolith to microservices, reducing deployment time by 65%",
-      "Mentored junior engineers and established code review practices that reduced production bugs by 30%"
+      "Validated and hardened LLM-driven features by designing and running prompt tests with LangSmith, ensuring outputs met quality and compliance standards while avoiding bias across sensitive attributes (e.g., race, age, gender). This raised confidence in AI-assisted workflows across the company.",
+      "Accelerated integration of Pillar HR (acquired product) by ramping up quickly to stabilize and reduce bugs. Contributed to building Lever–Pillar integrated features and introduced best practices (code reuse, consistent patterns in Python and TypeScript), improving maintainability and delivery speed across teams.",
+      "Project lead & spec author for “Remote Work” (collab with Indeed/LinkedIn); ensured contract/API compliance across public/paid APIs and XML feeds; post-release reviews with LinkedIn; impacted ~250k daily applicants.",
+      "Drove major performance optimizations on internal Jobs page: cut payloads >75% for large accounts by removing duplication, async user loading, and loading only active postings; impacted 27k+ users.",
+      "Project lead (team of 4) and IC for “Referrals” (paid feature): automated referred-candidate workflows and delivered significant UX/UI improvements; impacted ~1.5M users.",
+      "Wrote and configured integration tests for “Bulk Imports,” raising developer confidence and catching regressions early.",
+      "Upgraded Elasticsearch 6.8 → OpenSearch 2.11: led reindex strategy/batch release, right-sized cluster for growth, added health monitors, refactored repo (callback → async, removed dead code), re-enabled integration tests; ~1.5M users impacted; ~35% cost reduction.",
+      "Converted 100+ CoffeeScript files to TypeScript, improving DX and reducing typing errors; positively affected 40+ devs.",
     ],
-    technologies: ["React", "TypeScript", "Node.js", "AWS", "Docker", "Kubernetes", "GraphQL"]
+    technologies: [
+      "TypeScript",
+      "CoffeeScript",
+      "Node.js",
+      "Kafka",
+      "Cypress",
+      "Elasticsearch",
+      "OpenSearch",
+      "AWS",
+      "MongoDB",
+      "DerbyJS",
+      "ShareDB",
+      "Figma",
+      "Kibana",
+      "OpenSearch Dashboards",
+      "Jira",
+      "Confluence",
+    ],
   },
   {
-    id: "exp-2",
-    company: "InnovateSoft Solutions",
-    companyLogo: "https://via.placeholder.com/80",
-    position: "Full Stack Developer",
-    location: "San Francisco, CA (Remote)",
-    startDate: "Mar 2020",
-    endDate: "Dec 2021",
-    description: "Developed and maintained full-stack web applications for enterprise clients. Implemented responsive UIs and RESTful APIs to support business operations and customer-facing products.",
+    id: "exp-hadamenu",
+    company: "Hada Menú",
+    companyLogo: "",
+    position: "Software Engineer & Cofounder",
+    location: "Mexico (Remote)",
+    startDate: "2019",
+    endDate: "Present",
+    description:
+      "Built a multilingual restaurant ordering platform with real-time kitchen screens, per-table carts, and auth APIs.",
     achievements: [
-      "Built a customer portal that increased self-service resolution by 45%",
-      "Optimized database queries that reduced page load times by 60%",
-      "Implemented CI/CD pipeline that streamlined deployment processes"
+      "Implemented authentication APIs and bilingual (EN/ES) UX with automatic locale detection.",
+      "Designed table-scoped carts enabling simultaneous orders from multiple devices.",
+      "Delivered real-time kitchen dashboards for instant order visibility.",
+      "Launched public demo to showcase end-to-end flow.",
     ],
-    technologies: ["React", "Redux", "Node.js", "Express", "MongoDB", "Jest", "GitHub Actions"]
+    technologies: [
+      "TypeScript",
+      "React",
+      "Laravel",
+      "PHP",
+      "Bash",
+      "Shared hosting",
+    ],
   },
   {
-    id: "exp-3",
-    company: "DataViz Technologies",
-    companyLogo: "https://via.placeholder.com/80",
-    position: "Frontend Developer",
-    location: "Austin, TX",
-    startDate: "Jun 2018",
-    endDate: "Feb 2020",
-    description: "Created interactive data visualization dashboards for financial services clients. Worked closely with UX designers and backend engineers to deliver intuitive interfaces for complex data analysis.",
+    id: "exp-bemusical-revsteer",
+    company: "BeMusical / RevSteer",
+    companyLogo: "",
+    position: "Full-Stack Engineer & Team Lead",
+    location: "San Francisco (Remote)",
+    startDate: "2017",
+    endDate: "2020",
+    description:
+      "Led full-stack development and team growth across two products; delivered payments, profiles, and AWS infra.",
     achievements: [
-      "Developed interactive charts that increased user engagement by 35%",
-      "Reduced bundle size by 45% through code splitting and lazy loading",
-      "Implemented accessibility features that ensured WCAG 2.1 AA compliance"
+      "Owned API + Frontend with ~1,600 monthly users.",
+      "Built automated AWS infrastructure tooling for scalability.",
+      "Implemented payouts/payments for musicians via Stripe API.",
+      "Scaled team from 1 → 10 engineers; shipped 5+ major features per product with direct code reviews.",
     ],
-    technologies: ["JavaScript", "D3.js", "Vue.js", "CSS3/SCSS", "Webpack", "Jest"]
+    technologies: [
+      "Django",
+      "PostgreSQL",
+      "React",
+      "Redux",
+      "Bootstrap",
+      "AWS",
+      "Stripe API",
+      "Twilio",
+      "Bash",
+      "Adobe XD",
+      "Dedicated servers",
+    ],
   },
   {
-    id: "exp-4",
-    company: "WebStart Studio",
-    companyLogo: "https://via.placeholder.com/80",
-    position: "Junior Web Developer",
-    location: "Chicago, IL",
-    startDate: "Aug 2016",
-    endDate: "May 2018",
-    description: "Designed and developed responsive websites for small to medium-sized businesses. Collaborated with designers to translate mockups into functional websites.",
+    id: "exp-domovolcanico",
+    company: "Domovolcanico",
+    companyLogo: "",
+    position: "Jr. Full-Stack Engineer",
+    location: "Puebla, Mexico (Hybrid)",
+    startDate: "2017",
+    endDate: "2017",
+    description:
+      "Supported dev tooling, CI practices, and maintenance for a portfolio of Laravel sites with significant traffic.",
     achievements: [
-      "Built and launched 20+ client websites with a 95% satisfaction rate",
-      "Implemented SEO best practices that improved client search rankings",
-      "Created reusable component library that accelerated development time"
+      "Set up and maintained a testing server; configured Git workflows for collaborative repos.",
+      "Maintained ~15 Laravel/Bootstrap/jQuery sites serving 10k+ users/month; improved release discipline.",
     ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "jQuery", "PHP", "WordPress", "Bootstrap"]
-  }
+    technologies: [
+      "Laravel",
+      "Bootstrap",
+      "jQuery",
+      "AWS",
+      "DigitalOcean",
+      "MariaDB",
+      "Git",
+    ],
+  },
+  {
+    id: "exp-hadaelectronics",
+    company: "HadaElectronics.com",
+    companyLogo: "",
+    position: "Hardware Designer (Cofounder)",
+    location: "Puebla, Mexico (Hybrid)",
+    startDate: "2016",
+    endDate: "2018",
+    description:
+      "Delivered firmware and educational content for automation projects; built and maintained the company site.",
+    achievements: [
+      "Developed firmware for 10+ automation hardware projects.",
+      "Produced 10+ didactic videos with 30k+ total views covering electronics and digital design.",
+    ],
+    technologies: [
+      "Arduino",
+      "PIC",
+      "FPGA",
+      "Bluetooth",
+      "MQTT",
+      "Golang",
+      "HTMX",
+      "Bash",
+    ],
+  },
 ];
 
 export default experienceData;
+
