@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           </div>
           <div className={styles.contactLinks}>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:carlos@hadaelectronics.com"
               className={styles.link}
               aria-label="Email"
             >
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/cjairm/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
