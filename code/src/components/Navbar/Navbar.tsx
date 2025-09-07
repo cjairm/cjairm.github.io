@@ -30,7 +30,11 @@ const Navbar: React.FC = () => {
     <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         <a href="/" className={styles.logo}>
-          JA
+          <img
+            src="/src/assets/navbar-logo.png"
+            alt="Profile"
+            style={{ maxHeight: "30px" }}
+          />
         </a>
 
         <button
@@ -90,4 +94,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-

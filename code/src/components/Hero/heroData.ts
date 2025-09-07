@@ -8,10 +8,10 @@ export interface HeroData {
 }
 
 export const heroData: HeroData = {
-  name: "James Anderson",
-  title: "Senior Software Engineer leading high-performance teams",
+  name: "Jair Méndez",
+  title: "Engineer Driving Scalable & Innovative Solutions",
   credential:
-    "10+ years building scalable applications for Fortune 500 companies",
+    "Experienced in architecting and delivering systems that empower teams and elevate user experiences",
   ctaText: "View Work",
   ctaLink: "work",
   profileImage: "/src/assets/me.jpg",
