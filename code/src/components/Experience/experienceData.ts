@@ -15,7 +15,7 @@ export const experienceData: ExperienceItem[] = [
   {
     id: "exp-employ",
     company: "Employ (Lever)",
-    companyLogo: "",
+    companyLogo: "https://www.employinc.com/wp-content/uploads/2024/08/favicon-employinc-256x256.png",
     position: "Lead Software Engineer",
     location: "Chicago, IL (Remote)",
     startDate: "2021",
@@ -112,13 +112,13 @@ export const experienceData: ExperienceItem[] = [
     companyLogo: "",
     position: "Jr. Full-Stack Engineer",
     location: "Puebla, Mexico (Hybrid)",
-    startDate: "2017",
+    startDate: "2014",
     endDate: "2017",
     description:
       "Supported dev tooling, CI practices, and maintenance for a portfolio of Laravel sites with significant traffic.",
     achievements: [
       "Set up and maintained a testing server; configured Git workflows for collaborative repos.",
-      "Maintained ~15 Laravel/Bootstrap/jQuery sites serving 10k+ users/month; improved release discipline.",
+      "Maintained ~15 Laravel/Bootstrap/jQuery sites serving 10k+ users/month; improved release process.",
     ],
     technologies: [
       "Laravel",
