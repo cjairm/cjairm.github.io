@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               LinkedIn
             </a>
             <a
-              href="/resume.pdf"
+              href="/src/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
