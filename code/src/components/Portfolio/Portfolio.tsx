@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Projects.module.scss';
+import styles from './Portfolio.module.scss';
 
-// Project type definition
-export interface Project {
+// Portfolio type definition
+export interface Portfolio {
   id: string;
   title: string;
   role: string;
@@ -19,8 +19,8 @@ export interface Project {
   };
 }
 
-// Project data
-const projects: Project[] = [
+// Portfolio data
+const portfolio: Portfolio[] = [
   {
     id: 'project-1',
     title: 'E-Commerce Platform',
@@ -101,7 +101,7 @@ const projects: Project[] = [
   }
 ];
 
-const Projects: React.FC = () => {
+const Portfolio: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.headingContainer}>
@@ -110,7 +110,7 @@ const Projects: React.FC = () => {
       </div>
 
       <div className={styles.projectsGrid}>
-        {projects.map((project) => (
+        {portfolio.map((project) => (
           <article key={project.id} className={styles.projectCard}>
             <div className={styles.imageContainer}>
               <img 
@@ -179,4 +179,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default Portfolio;

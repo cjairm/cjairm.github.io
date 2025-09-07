@@ -1,0 +1,197 @@
+@use '../../styles/variables' as v;
+@use '../../styles/_base';
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: v.$spacing-xl v.$spacing-md;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    padding: v.$spacing-lg v.$spacing-sm;
+  }
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: v.$spacing-xl;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    gap: v.$spacing-lg;
+  }
+}
+
+.educationCard {
+  background-color: v.$color-bg-secondary;
+  border-radius: v.$border-radius-lg;
+  padding: v.$spacing-xl;
+  box-shadow: v.$shadow-md;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid v.$color-accent;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: v.$shadow-lg;
+  }
+  
+  @media (max-width: v.$breakpoint-sm) {
+    padding: v.$spacing-lg;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-md;
+  margin-bottom: v.$spacing-md;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: v.$spacing-sm;
+  }
+}
+
+.logoContainer {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: v.$border-radius-md;
+  overflow: hidden;
+  box-shadow: v.$shadow-sm;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.institutionLogo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.headerInfo {
+  flex: 1;
+}
+
+.degree {
+  font-size: v.$font-size-lg;
+  font-weight: v.$font-weight-bold;
+  margin-bottom: v.$spacing-xs;
+  color: v.$color-text-primary;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    font-size: v.$font-size-base;
+  }
+}
+
+.institution {
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-medium;
+  color: v.$color-accent;
+  margin-bottom: v.$spacing-xs;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    font-size: v.$font-size-sm;
+  }
+}
+
+.details {
+  display: flex;
+  gap: v.$spacing-md;
+  color: v.$color-text-secondary;
+  font-size: v.$font-size-sm;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    flex-direction: column;
+    gap: v.$spacing-xs;
+    font-size: calc(v.$font-size-sm - 1px);
+  }
+}
+
+.description {
+  margin-bottom: v.$spacing-lg;
+  line-height: 1.6;
+  color: v.$color-text-primary;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    font-size: v.$font-size-sm;
+    margin-bottom: v.$spacing-md;
+  }
+}
+
+.sectionTitle {
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-medium;
+  margin-bottom: v.$spacing-sm;
+  font-family: v.$font-family-mono;
+  color: v.$color-text-primary;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    font-size: v.$font-size-sm;
+  }
+}
+
+.coursesContainer {
+  margin-bottom: v.$spacing-lg;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    margin-bottom: v.$spacing-md;
+  }
+}
+
+.courseList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$spacing-xs;
+}
+
+.courseItem {
+  display: inline-block;
+  padding: v.$spacing-xs v.$spacing-sm;
+  background-color: rgba(v.$color-accent, 0.1);
+  color: v.$color-accent;
+  border-radius: v.$border-radius-sm;
+  font-size: v.$font-size-sm;
+  font-weight: v.$font-weight-medium;
+  font-family: v.$font-family-mono;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    font-size: calc(v.$font-size-sm - 1px);
+    padding: calc(v.$spacing-xs - 1px) v.$spacing-sm;
+  }
+}
+
+.achievementsContainer {
+  margin-top: v.$spacing-md;
+}
+
+.achievementsList {
+  list-style-position: outside;
+  padding-left: v.$spacing-lg;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    padding-left: v.$spacing-md;
+  }
+}
+
+.achievementItem {
+  margin-bottom: v.$spacing-sm;
+  line-height: 1.5;
+  font-size: v.$font-size-base;
+  
+  @media (max-width: v.$breakpoint-sm) {
+    font-size: v.$font-size-sm;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

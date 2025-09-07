@@ -148,3 +148,38 @@ a {
   color: v.$color-accent;
   font-size: 0.9em;
 }
+
+.headingContainer {
+  position: relative;
+  margin-bottom: v.$spacing-lg;
+
+  @media (max-width: v.$breakpoint-sm) {
+    margin-bottom: v.$spacing-xl;
+  }
+}
+
+.heading {
+  font-family: v.$font-family-mono;
+  font-size: v.$font-size-2xl;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-text-primary;
+  margin-bottom: v.$spacing-sm;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  
+  @media (min-width: v.$breakpoint-md) {
+    font-size: v.$font-size-3xl;
+  }
+}
+
+.headingUnderline {
+  width: 60px;
+  height: 3px;
+  background-color: v.$color-accent;
+  margin-top: v.$spacing-xs;
+  border-radius: v.$border-radius-sm;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.2s forwards;
+}

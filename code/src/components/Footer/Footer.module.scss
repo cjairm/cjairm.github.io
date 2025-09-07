@@ -21,6 +21,11 @@
   }
 }
 
+.displayLinks {
+  display: flex;
+  justify-content: space-between;
+}
+
 .navLinks {
   display: flex;
   flex-wrap: wrap;

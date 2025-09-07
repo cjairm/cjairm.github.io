@@ -2,9 +2,11 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import About from "./components/About";
-import Projects from "./components/Projects";
+import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import Fun from "./components/Fun";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
 import Footer from "./components/Footer";
 import styles from "./styles/App.module.scss";
 
@@ -21,8 +23,16 @@ function App() {
           <About />
         </Section>
         
-        <Section id="work" className={styles.workSection}>
-          <Projects />
+        <Section id="experience" className={styles.experienceSection}>
+          <Experience />
+        </Section>
+        
+        <Section id="education" className={styles.educationSection}>
+          <Education />
+        </Section>
+        
+        <Section id="portfolio" className={styles.workSection}>
+          <Portfolio />
         </Section>
         
         <Section id="skills" className={styles.skillsSection}>

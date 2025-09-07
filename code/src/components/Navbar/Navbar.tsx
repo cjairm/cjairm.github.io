@@ -61,11 +61,29 @@ const Navbar: React.FC = () => {
             </li>
             <li className={styles.navItem}>
               <a
-                href="#work"
+                href="#experience"
                 className={styles.navLink}
-                onClick={(e) => handleScrollTo(e, "work", setIsMenuOpen)}
+                onClick={(e) => handleScrollTo(e, "experience", setIsMenuOpen)}
               >
-                Work
+                Experience
+              </a>
+            </li>
+            <li className={styles.navItem}>
+              <a
+                href="#education"
+                className={styles.navLink}
+                onClick={(e) => handleScrollTo(e, "education", setIsMenuOpen)}
+              >
+                Education
+              </a>
+            </li>
+            <li className={styles.navItem}>
+              <a
+                href="#portfolio"
+                className={styles.navLink}
+                onClick={(e) => handleScrollTo(e, "portfolio", setIsMenuOpen)}
+              >
+                Portfolio
               </a>
             </li>
             <li className={styles.navItem}>
@@ -75,15 +93,6 @@ const Navbar: React.FC = () => {
                 onClick={(e) => handleScrollTo(e, "skills", setIsMenuOpen)}
               >
                 Skills
-              </a>
-            </li>
-            <li className={styles.navItem}>
-              <a
-                href="#beyond"
-                className={styles.navLink}
-                onClick={(e) => handleScrollTo(e, "beyond", setIsMenuOpen)}
-              >
-                Fun
               </a>
             </li>
           </ul>
