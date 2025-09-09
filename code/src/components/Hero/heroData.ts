@@ -1,3 +1,5 @@
+import meImg from "@/assets/me.jpg";
+
 export interface HeroData {
   name: string;
   title: string;
@@ -14,6 +16,5 @@ export const heroData: HeroData = {
     "Experienced in architecting and delivering systems that empower teams and elevate user experiences",
   ctaText: "View Experience",
   ctaLink: "experience",
-  profileImage: "/src/assets/me.jpg",
+  profileImage: meImg,
 };
-

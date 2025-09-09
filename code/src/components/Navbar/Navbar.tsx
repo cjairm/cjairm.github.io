@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import navbarImg from "@/assets/navbar-logo.png";
 import styles from "./Navbar.module.scss";
 import { handleScrollTo } from "../../utils/scroll";
 
@@ -30,11 +31,7 @@ const Navbar: React.FC = () => {
     <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         <a href="/" className={styles.logo}>
-          <img
-            src="/src/assets/navbar-logo.png"
-            alt="Profile"
-            style={{ maxHeight: "30px" }}
-          />
+          <img src={navbarImg} alt="Profile" style={{ maxHeight: "30px" }} />
         </a>
 
         <button

@@ -1,3 +1,8 @@
+import automatedhubImg from "@/assets/automatedhub-website.png";
+import lunaraImg from "@/assets/lunara-website.png";
+import cjairmImg from "@/assets/cjairm-website.png";
+import hadamenuImg from "@/assets/hadamenu-website.png";
+
 export interface Portfolio {
   id: string;
   title: string;
@@ -29,7 +34,7 @@ export const portfolioData: Portfolio[] = [
       "Designed scalable topic structures and APIs enabling IoT device control and monitoring",
     ],
     image: {
-      src: "/src/assets/automatedhub-website.png",
+      src: automatedhubImg,
       alt: "MQTT publish/subscribe architecture from AutomatedHub",
     },
     links: {
@@ -71,7 +76,7 @@ export const portfolioData: Portfolio[] = [
       "Delivered scalable, fully digital styling services with a lean tech stack",
     ],
     image: {
-      src: "/src/assets/lunara-website.png", // replace with actual screenshot if you prefer
+      src: lunaraImg,
       alt: "Lunara Weddings platform showcasing AI wedding styling services",
     },
     links: {
@@ -92,7 +97,7 @@ export const portfolioData: Portfolio[] = [
       "Simplified content updates through data-driven sections",
     ],
     image: {
-      src: "/src/assets/cjairm-website.png",
+      src: cjairmImg,
       alt: "Personal website template preview",
     },
     links: {
@@ -183,7 +188,7 @@ export const portfolioData: Portfolio[] = [
       "Deployed real-time order dashboards for kitchen staff",
     ],
     image: {
-      src: "/src/assets/hadamenu-website.png",
+      src: hadamenuImg,
       alt: "Restaurant ordering flow demo",
     },
     links: {
