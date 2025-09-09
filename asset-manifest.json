@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.7f73e312.css",
+    "main.js": "/react-gh-pages/static/js/main.14f9b05b.js",
+    "static/media/hadamenu-website.png": "/react-gh-pages/static/media/hadamenu-website.30f44e21b96de1ebafb4.png",
+    "static/media/lunara-website.png": "/react-gh-pages/static/media/lunara-website.cab12f2defd9fdb4123f.png",
+    "static/media/cjairm-website.png": "/react-gh-pages/static/media/cjairm-website.3005149eeb6b41c8eda6.png",
+    "static/media/automatedhub-website.png": "/react-gh-pages/static/media/automatedhub-website.60927365232fa11f83a4.png",
+    "static/media/me.jpg": "/react-gh-pages/static/media/me.eafa88661b6c413335fa.jpg",
+    "static/media/navbar-logo.png": "/react-gh-pages/static/media/navbar-logo.63b5171c729aa64f3035.png",
+    "index.html": "/react-gh-pages/index.html",
+    "main.7f73e312.css.map": "/react-gh-pages/static/css/main.7f73e312.css.map",
+    "main.14f9b05b.js.map": "/react-gh-pages/static/js/main.14f9b05b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f73e312.css",
+    "static/js/main.14f9b05b.js"
+  ]
+}
