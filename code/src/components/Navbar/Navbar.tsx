@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import navbarImg from "@/assets/navbar-logo.png";
+import navbarImg from "../../assets/navbar-logo.png";
 import styles from "./Navbar.module.scss";
 import { handleScrollTo } from "../../utils/scroll";
 

@@ -1,4 +1,4 @@
-import meImg from "@/assets/me.jpg";
+import meImg from "../../assets/me.jpg";
 
 export interface HeroData {
   name: string;

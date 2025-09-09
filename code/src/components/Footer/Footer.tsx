@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import resume from "@/assets/resume.pdf";
 import { handleScrollTo } from "../../utils/scroll";
 
 const Footer: React.FC = () => {
@@ -74,7 +73,7 @@ const Footer: React.FC = () => {
               LinkedIn
             </a>
             <a
-              href={resume}
+              href={`${process.env.PUBLIC_URL}/assets/resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}

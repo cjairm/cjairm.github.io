@@ -1,7 +1,7 @@
-import automatedhubImg from "@/assets/automatedhub-website.png";
-import lunaraImg from "@/assets/lunara-website.png";
-import cjairmImg from "@/assets/cjairm-website.png";
-import hadamenuImg from "@/assets/hadamenu-website.png";
+import automatedhubImg from "../../assets/automatedhub-website.png";
+import lunaraImg from "../../assets/lunara-website.png";
+import cjairmImg from "../../assets/cjairm-website.png";
+import hadamenuImg from "../../assets/hadamenu-website.png";
 
 export interface Portfolio {
   id: string;
