@@ -73,7 +73,8 @@ const Footer: React.FC = () => {
               LinkedIn
             </a>
             <a
-              href={`${process.env.PUBLIC_URL}/assets/resume.pdf`}
+              href={`${process.env.PUBLIC_URL}/resume.pdf`}
+              download="Jair-Mendez-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
