@@ -1,7 +1,7 @@
 {
   "name": "cjairm",
   "version": "2.0.0",
-  "homepage": "https://cjairm.github.io/",
+  "homepage": "https://cjairm.me/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
